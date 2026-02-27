@@ -1,0 +1,75 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './context/AuthContext';
+import Header from './components/Header';
+import Landing from './pages/Landing';
+import Login from './pages/Login';
+import AdminHome from './pages/AdminHome';
+import AddStudent from './pages/AddStudent';
+import AddFaculty from './pages/AddFaculty';
+import ViewStudents from './pages/ViewStudents';
+import ViewFaculty from './pages/ViewFaculty';
+import ViewAttendance from './pages/ViewAttendance';
+import FacultyDashboard from './pages/FacultyDashboard';
+import StudentDashboard from './pages/StudentDashboard';
+import './index.css';
+
+function ProtectedRoute({ children, roles }) {
+  const { user, loading } = useAuth();
+  if (loading) return <div className="text-center py-20 text-gray-400">Loading...</div>;
+  if (!user) return <Navigate to="/login" />;
+  if (roles && !roles.includes(user.role)) return <Navigate to="/" />;
+  return children;
+}
+
+function PublicRoute({ children }) {
+  const { user, loading } = useAuth();
+  if (loading) return <div className="text-center py-20 text-gray-400">Loading...</div>;
+  if (user) {
+    if (user.role === 'admin') return <Navigate to="/admin" />;
+    if (user.role === 'faculty') return <Navigate to="/faculty/dashboard" />;
+    if (user.role === 'student') return <Navigate to="/student/dashboard" />;
+  }
+  return children;
+}
+
+function AppRoutes() {
+  return (
+    <Routes>
+      {/* Public */}
+      <Route path="/" element={<PublicRoute><Landing /></PublicRoute>} />
+      <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
+
+      {/* Admin */}
+      <Route path="/admin" element={<ProtectedRoute roles={['admin']}><AdminHome /></ProtectedRoute>} />
+      <Route path="/admin/add-student" element={<ProtectedRoute roles={['admin']}><AddStudent /></ProtectedRoute>} />
+      <Route path="/admin/add-faculty" element={<ProtectedRoute roles={['admin']}><AddFaculty /></ProtectedRoute>} />
+      <Route path="/admin/students" element={<ProtectedRoute roles={['admin']}><ViewStudents /></ProtectedRoute>} />
+      <Route path="/admin/faculty" element={<ProtectedRoute roles={['admin']}><ViewFaculty /></ProtectedRoute>} />
+      <Route path="/admin/attendance" element={<ProtectedRoute roles={['admin']}><ViewAttendance /></ProtectedRoute>} />
+
+      {/* Faculty */}
+      <Route path="/faculty/dashboard" element={<ProtectedRoute roles={['faculty']}><FacultyDashboard /></ProtectedRoute>} />
+
+      {/* Student */}
+      <Route path="/student/dashboard" element={<ProtectedRoute roles={['student']}><StudentDashboard /></ProtectedRoute>} />
+
+      {/* Fallback */}
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AuthProvider>
+        <div className="bg-gray-50 text-gray-800 min-h-screen">
+          <Header />
+          <main className="max-w-6xl mx-auto p-6">
+            <AppRoutes />
+          </main>
+        </div>
+      </AuthProvider>
+    </BrowserRouter>
+  );
+}
