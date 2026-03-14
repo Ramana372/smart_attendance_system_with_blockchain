@@ -14,6 +14,7 @@ from datetime import date, datetime
 import json
 
 from .models import Student, Faculty, Attendance
+from .embedding_utils import save_student_embedding
 
 
 def api_login_required(view_func):
@@ -170,7 +171,17 @@ def api_student_add(request):
             section=section,
             profile_pic=profile_pic,
         )
-        return JsonResponse({'success': True, 'id': student.id})
+
+        # Signal should generate embedding automatically; keep fallback for reliability.
+        embedding_generated = bool(student.face_embedding)
+        if profile_pic and not embedding_generated:
+            embedding_generated = save_student_embedding(student)
+
+        return JsonResponse({
+            'success': True,
+            'id': student.id,
+            'embedding_generated': embedding_generated,
+        })
     except Exception as e:
         return JsonResponse({'success': False, 'error': str(e)}, status=400)
 
