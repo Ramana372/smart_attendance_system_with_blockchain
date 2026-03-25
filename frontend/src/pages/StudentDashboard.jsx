@@ -135,7 +135,7 @@ export default function StudentDashboard() {
               {records.length > 0 ? records.map((a, i) => (
                 <tr key={i} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4 text-sm text-gray-900">{a.date}</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">{a.time}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">{a.period_time || a.time}</td>
                   <td className="px-6 py-4 text-sm text-gray-900">{a.faculty_name}</td>
                   <td className="px-6 py-4 text-sm text-gray-600">{a.period}</td>
                   <td className="px-6 py-4">

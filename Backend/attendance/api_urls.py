@@ -13,10 +13,14 @@ urlpatterns = [
     # Students
     path('students/', api_views.api_students_list, name='api_students_list'),
     path('students/add/', api_views.api_student_add, name='api_student_add'),
+    path('students/<int:student_id>/update/', api_views.api_student_update, name='api_student_update'),
+    path('students/<int:student_id>/delete/', api_views.api_student_delete, name='api_student_delete'),
 
     # Faculty
     path('faculty/', api_views.api_faculty_list, name='api_faculty_list'),
     path('faculty/add/', api_views.api_faculty_add, name='api_faculty_add'),
+    path('faculty/<int:faculty_id>/update/', api_views.api_faculty_update, name='api_faculty_update'),
+    path('faculty/<int:faculty_id>/delete/', api_views.api_faculty_delete, name='api_faculty_delete'),
 
     # Attendance
     path('attendance/', api_views.api_attendance_list, name='api_attendance_list'),

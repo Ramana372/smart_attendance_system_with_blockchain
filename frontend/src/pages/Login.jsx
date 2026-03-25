@@ -22,7 +22,8 @@ export default function Login() {
       else if (data.role === 'student') navigate('/student/dashboard');
       else navigate('/');
     } catch (err) {
-      setError(err.message || 'Invalid username or password');
+      const serverError = err?.response?.data?.error;
+      setError(serverError || err.message || 'Invalid username or password');
     } finally {
       setLoading(false);
     }

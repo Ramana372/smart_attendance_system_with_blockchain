@@ -79,9 +79,9 @@ export default function ViewAttendance() {
               {records.map((a, i) => (
                 <tr key={i} className="hover:bg-gray-50">
                   <td className="px-4 py-2 text-sm">{a.date}</td>
-                  <td className="px-4 py-2 text-sm">{a.time}</td>
-                  <td className="px-4 py-2 text-sm">{a.faculty_name}</td>
-                  <td className="px-4 py-2 text-sm">{a.student_name} ({a.student_id})</td>
+                  <td className="px-4 py-2 text-sm">{a.period_time || a.time}</td>
+                  <td className="px-4 py-2 text-sm">{a.faculty_name} <span className="text-gray-500">({a.faculty_uid})</span></td>
+                  <td className="px-4 py-2 text-sm">{a.student_name} <span className="text-gray-500">({a.student_id})</span></td>
                   <td className="px-4 py-2 text-sm">{a.branch}</td>
                   <td className="px-4 py-2 text-sm">{a.year}</td>
                   <td className="px-4 py-2 text-sm">{a.section}</td>
