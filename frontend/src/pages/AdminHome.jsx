@@ -17,6 +17,7 @@ import {
 export default function AdminHome() {
   const [stats, setStats] = useState({ total_students: 0, total_faculty: 0, total_attendance: 0 });
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     getAdminStats()
@@ -24,7 +25,11 @@ export default function AdminHome() {
         setStats(r.data);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch((err) => {
+        console.error('Admin stats error:', err);
+        setError(err.message || 'Failed to load stats');
+        setLoading(false);
+      });
   }, []);
 
   const statCards = [
@@ -60,6 +65,8 @@ export default function AdminHome() {
       description: 'Manage student profiles, registrations, and academic details',
       gradient: 'from-blue-600 to-cyan-600',
       hoverGradient: 'hover:from-blue-700 hover:to-cyan-700',
+      bg: 'bg-blue-50',
+      color: 'from-blue-600 to-cyan-600',
       icon: <HiOutlineUserGroup className="w-12 h-12" />,
       actions: [
         { to: '/admin/add-student', label: 'Add New Student', icon: <HiOutlinePlusCircle className="w-5 h-5" /> },
@@ -71,6 +78,8 @@ export default function AdminHome() {
       description: 'Manage faculty members, UIDs, and system access',
       gradient: 'from-emerald-600 to-green-600',
       hoverGradient: 'hover:from-emerald-700 hover:to-green-700',
+      bg: 'bg-emerald-50',
+      color: 'from-emerald-600 to-green-600',
       icon: <HiOutlineAcademicCap className="w-12 h-12" />,
       actions: [
         { to: '/admin/add-faculty', label: 'Add New Faculty', icon: <HiOutlinePlusCircle className="w-5 h-5" /> },
@@ -82,6 +91,8 @@ export default function AdminHome() {
       description: 'Monitor, search, and analyze attendance records across all classes',
       gradient: 'from-amber-500 to-orange-500',
       hoverGradient: 'hover:from-amber-600 hover:to-orange-600',
+      bg: 'bg-amber-50',
+      color: 'from-amber-500 to-orange-500',
       icon: <HiOutlineClipboardList className="w-12 h-12" />,
       actions: [
         { to: '/admin/attendance', label: 'View Records', icon: <HiOutlineEye className="w-5 h-5" /> },
@@ -96,6 +107,18 @@ export default function AdminHome() {
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-500">Loading dashboard...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center bg-red-50 p-8 rounded-xl">
+          <h2 className="text-xl font-bold text-red-600 mb-2">Error Loading Dashboard</h2>
+          <p className="text-red-500 mb-4">{error}</p>
+          <p className="text-sm text-gray-600">Please refresh the page or check your connection</p>
         </div>
       </div>
     );

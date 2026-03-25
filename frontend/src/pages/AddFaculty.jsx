@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { addFaculty } from '../api/api';
 import Toast from '../components/Toast';
-import { HiOutlineUserPlus, HiOutlineUser, HiOutlineMail, HiOutlineIdentification, HiOutlinePhone, HiOutlineUpload } from 'react-icons/hi';
-
+import { HiOutlineUserAdd, HiOutlineUser, HiOutlineMail, HiOutlineIdentification, HiOutlinePhone, HiOutlineUpload } from 'react-icons/hi';
 
 export default function AddFaculty() {
   const navigate = useNavigate();
@@ -39,29 +38,20 @@ export default function AddFaculty() {
       {toast && <Toast message={toast.msg} type={toast.type} onClose={() => setToast(null)} />}
       
       {/* Header */}
-      <div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-r from-emerald-600 to-green-600 rounded-2xl shadow-xl p-6 text-white"
-      >
+      <div className="bg-gradient-to-r from-emerald-600 to-green-600 rounded-2xl shadow-xl p-6 text-white">
         <div className="flex items-center gap-4">
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3">
-            <HiOutlineUserPlus className="w-8 h-8" />
+            <HiOutlineUserAdd className="w-8 h-8" />
           </div>
           <div>
             <h1 className="text-2xl font-bold">Add New Faculty</h1>
             <p className="text-emerald-100 text-sm">Register a new faculty member to the system</p>
           </div>
         </div>
-      </divdiv>
+      </div>
 
       {/* Form */}
-      <div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100"
-      >
+      <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Personal Information */}
           <div>
@@ -204,7 +194,7 @@ export default function AddFaculty() {
                 </>
               ) : (
                 <>
-                  <HiOutlineUserPlus className="w-5 h-5" />
+                  <HiOutlineUserAdd className="w-5 h-5" />
                   Add Faculty
                 </>
               )}
@@ -218,7 +208,7 @@ export default function AddFaculty() {
             </button>
           </div>
         </form>
-      </divdiv>
+      </div>
     </div>
   );
 }
