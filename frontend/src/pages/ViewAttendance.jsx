@@ -3,7 +3,7 @@ import { getAttendance } from '../api/api';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import { HiOutlineSearch, HiOutlineCalendar, HiOutlineClipboardCheck } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -67,7 +67,7 @@ export default function ViewAttendance() {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Header */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl shadow-xl p-6 text-white"
@@ -83,12 +83,12 @@ export default function ViewAttendance() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </divdiv>
 
       {/* Search and Stats */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Search Form */}
-        <motion.div
+        <div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
@@ -123,10 +123,10 @@ export default function ViewAttendance() {
               )}
             </div>
           </form>
-        </motion.div>
+        </divdiv>
 
         {/* Analytics Card */}
-        <motion.div
+        <div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
@@ -162,11 +162,11 @@ export default function ViewAttendance() {
               </div>
             )}
           </div>
-        </motion.div>
+        </divdiv>
       </div>
 
       {/* Table */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -186,7 +186,7 @@ export default function ViewAttendance() {
             <tbody className="divide-y divide-gray-100">
               {records.length > 0 ? (
                 records.map((a, i) => (
-                  <motion.tr
+                  <tr
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -248,7 +248,7 @@ export default function ViewAttendance() {
                         {a.status === 'Present' ? '✓' : '✗'} {a.status}
                       </span>
                     </td>
-                  </motion.tr>
+                  </divtr>
                 ))
               ) : (
                 <tr>
@@ -268,7 +268,7 @@ export default function ViewAttendance() {
             </tbody>
           </table>
         </div>
-      </motion.div>
+      </divdiv>
     </div>
   );
 }

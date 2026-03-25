@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { addFaculty } from '../api/api';
 import Toast from '../components/Toast';
 import { HiOutlineUserPlus, HiOutlineUser, HiOutlineMail, HiOutlineIdentification, HiOutlinePhone, HiOutlineUpload } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+
 
 export default function AddFaculty() {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ export default function AddFaculty() {
       {toast && <Toast message={toast.msg} type={toast.type} onClose={() => setToast(null)} />}
       
       {/* Header */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-gradient-to-r from-emerald-600 to-green-600 rounded-2xl shadow-xl p-6 text-white"
@@ -53,10 +53,10 @@ export default function AddFaculty() {
             <p className="text-emerald-100 text-sm">Register a new faculty member to the system</p>
           </div>
         </div>
-      </motion.div>
+      </divdiv>
 
       {/* Form */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -218,7 +218,7 @@ export default function AddFaculty() {
             </button>
           </div>
         </form>
-      </motion.div>
+      </divdiv>
     </div>
   );
 }

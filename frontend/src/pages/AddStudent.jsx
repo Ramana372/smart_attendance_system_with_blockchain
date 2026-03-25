@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { addStudent } from '../api/api';
 import Toast from '../components/Toast';
 import { HiOutlineUserPlus, HiOutlineUser, HiOutlineMail, HiOutlineIdentification, HiOutlineAcademicCap, HiOutlineUpload } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+
 
 const BRANCHES = ['CSE', 'IT', 'ECE', 'CHEM', 'MECH', 'EEE', 'CIVIL'];
 const YEARS = ['1', '2', '3', '4'];
@@ -43,7 +43,7 @@ export default function AddStudent() {
       {toast && <Toast message={toast.msg} type={toast.type} onClose={() => setToast(null)} />}
       
       {/* Header */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl shadow-xl p-6 text-white"
@@ -57,10 +57,10 @@ export default function AddStudent() {
             <p className="text-blue-100 text-sm">Register a new student to the system</p>
           </div>
         </div>
-      </motion.div>
+      </divdiv>
 
       {/* Form */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -238,7 +238,7 @@ export default function AddStudent() {
             </button>
           </div>
         </form>
-      </motion.div>
+      </divdiv>
     </div>
   );
 }
