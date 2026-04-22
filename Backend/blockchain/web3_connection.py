@@ -13,10 +13,17 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 # Configuration
-GANACHE_URL = os.getenv("GANACHE_URL", "http://127.0.0.1:7545")
-GANACHE_NETWORK_ID = os.getenv("GANACHE_NETWORK_ID", 5777)
-CONNECTION_TIMEOUT = 5  # seconds
-MAX_RETRIES = 3
+GANACHE_URL = os.getenv("GANACHE_URL", "http://127.0.0.1:7545")  # Default to Desktop port
+GANACHE_NETWORK_ID = int(os.getenv("GANACHE_NETWORK_ID", "5777"))
+CONNECTION_TIMEOUT = int(os.getenv("CONNECTION_TIMEOUT", "10"))  # Increased timeout
+MAX_RETRIES = int(os.getenv("MAX_RETRIES", "3"))
+
+# Get ABI file path (works from different working directories)
+CURRENT_DIR = Path(__file__).resolve().parent
+ABI_FILE_PATH = CURRENT_DIR / "abi.json"
+
+# Smart contract configuration
+CONTRACT_ADDRESS = os.getenv("CONTRACT_ADDRESS", "0xDa0c9a811f7851Deb38A66889D5510789DbBCd05")
 
 # Get ABI file path (works from different working directories)
 CURRENT_DIR = Path(__file__).resolve().parent
@@ -162,24 +169,139 @@ class Web3ConnectionManager:
         Verify connection status and contract availability
         
         Returns:
-            dict: Status information
+            dict: Status information with detailed diagnostics
         """
         status = {
             "is_connected": self.is_connected,
             "ganache_url": self.ganache_url,
             "network_id": self.network_id,
             "contract_initialized": self.contract is not None,
-            "abi_loaded": self.abi is not None
+            "abi_loaded": self.abi is not None,
+            "connection_healthy": False,
+            "diagnostics": {}
         }
         
-        if self.is_connected:
+        if self.is_connected and self.w3:
             try:
-                status["ganache_accounts"] = len(self.w3.eth.accounts)
-                status["latest_block"] = self.w3.eth.block_number
+                # Test basic connectivity
+                latest_block = self.w3.eth.block_number
+                status["diagnostics"]["latest_block"] = latest_block
+                
+                # Check accounts
+                accounts = self.w3.eth.accounts
+                status["diagnostics"]["accounts_count"] = len(accounts)
+                
+                # Check gas price
+                gas_price = self.w3.eth.gas_price
+                status["diagnostics"]["gas_price"] = gas_price
+                
+                # Check contract if initialized
+                if self.contract:
+                    try:
+                        # Just check if contract has an address - don't call functions that might fail
+                        contract_address = self.contract.address
+                        status["diagnostics"]["contract_address"] = contract_address
+                        status["connection_healthy"] = True
+                    except Exception as e:
+                        status["diagnostics"]["contract_error"] = str(e)
+                        # Contract exists but has issues - still mark as healthy for basic operations
+                        status["connection_healthy"] = True
+                else:
+                    status["connection_healthy"] = True  # Basic connection is healthy
+                
             except Exception as e:
-                status["error"] = str(e)
+                status["diagnostics"]["error"] = str(e)
+                status["connection_healthy"] = False
+                self.is_connected = False
         
-        return status
+    def health_check(self):
+        """
+        Perform comprehensive health check of blockchain connection
+        
+        Returns:
+            dict: Health status with recommendations
+        """
+        # Check current connection status
+        status = {
+            "is_connected": self.is_connected,
+            "ganache_url": self.ganache_url,
+            "network_id": self.network_id,
+            "contract_initialized": self.contract is not None,
+            "abi_loaded": self.abi is not None,
+            "connection_healthy": self.is_connected and self.contract is not None,
+            "diagnostics": {}
+        }
+        
+        issues = []
+        recommendations = []
+        
+        # Check if connected
+        if not self.is_connected:
+            issues.append("No connection to Ganache")
+            recommendations.append("Ensure Ganache Desktop is running on " + self.ganache_url)
+            status["connection_healthy"] = False
+        
+        # Check ABI
+        if not self.abi:
+            issues.append("ABI file not loaded")
+            recommendations.append("Verify abi.json exists in blockchain directory")
+            status["connection_healthy"] = False
+        
+        # Check contract
+        if not self.contract:
+            issues.append("Smart contract not initialized")
+            recommendations.append("Check contract address and ABI compatibility")
+            status["connection_healthy"] = False
+        
+        # Try to get diagnostics if connected
+        if self.is_connected and self.w3:
+            try:
+                latest_block = self.w3.eth.block_number
+                status["diagnostics"]["latest_block"] = latest_block
+                
+                accounts = self.w3.eth.accounts
+                status["diagnostics"]["accounts_count"] = len(accounts)
+                
+                if self.contract:
+                    status["diagnostics"]["contract_address"] = self.contract.address
+                    
+            except Exception as e:
+                issues.append("Network connectivity issue")
+                recommendations.append("Check Ganache network configuration")
+                status["diagnostics"]["error"] = str(e)
+                status["connection_healthy"] = False
+        
+        health_report = {
+            "overall_status": "healthy" if status.get("connection_healthy", False) else "unhealthy",
+            "issues": issues,
+            "recommendations": recommendations,
+            "details": status
+        }
+        
+        return health_report
+    
+    def reconnect(self):
+        """
+        Force reconnection to blockchain network
+        
+        Returns:
+            bool: True if reconnected successfully
+        """
+        logger.info("Attempting to reconnect to blockchain...")
+        
+        # Reset connection state
+        self.is_connected = False
+        self.contract = None
+        self.w3 = None
+        
+        # Attempt new connection
+        if self.connect():
+            if self.initialize_contract():
+                logger.info("Successfully reconnected to blockchain")
+                return True
+        
+        logger.error("Failed to reconnect to blockchain")
+        return False
 
 
 # Global instance for easy access

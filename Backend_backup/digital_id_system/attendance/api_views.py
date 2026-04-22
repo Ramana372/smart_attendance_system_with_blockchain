@@ -13,12 +13,9 @@ from django.db.models import Q
 from datetime import date, datetime, time as dt_time, timedelta
 import json
 from django.utils import timezone
-import asyncio
 
 from .models import Student, Faculty, Attendance
 from .embedding_utils import save_student_embedding
-from .websocket_utils import broadcast_attendance_update_sync
-from .prediction_utils import AttendancePrediction, StudentAttendancePrediction
 
 
 PERIOD_TIME_SLOTS = {
@@ -31,11 +28,6 @@ PERIOD_TIME_SLOTS = {
     '7': {'start': dt_time(15, 0), 'end': dt_time(16, 0), 'label': '03:00 PM - 04:00 PM'},
     '8': {'start': dt_time(16, 0), 'end': dt_time(17, 0), 'label': '04:00 PM - 05:00 PM'},
 }
-
-# Temporary demo toggle for project expo screenshots.
-# When enabled, attendance can be opened outside 9 AM - 5 PM by assigning a fallback period.
-EXPO_SCREENSHOT_MODE = True
-EXPO_DEFAULT_PERIOD = '3'
 
 
 def get_period_time_label(period):
@@ -65,15 +57,7 @@ def resolve_period(request):
     requested_period = request.POST.get('period', '').strip()
     if requested_period in PERIOD_TIME_SLOTS:
         return requested_period
-
-    current_period = get_current_period()
-    if current_period:
-        return current_period
-
-    if EXPO_SCREENSHOT_MODE:
-        return EXPO_DEFAULT_PERIOD
-
-    return None
+    return get_current_period()
 
 
 def get_class_students(branch, year, section):
@@ -547,7 +531,7 @@ def api_attendance_window_open(request):
     now = timezone.localtime(timezone.now()).replace(tzinfo=None)
 
     # If already past cutoff, auto-close by marking absentees.
-    if (not EXPO_SCREENSHOT_MODE) and cutoff and now > cutoff:
+    if cutoff and now > cutoff:
         created_absent, final_records = close_attendance_window_and_mark_absent(
             faculty, branch, year, section, period
         )
@@ -570,9 +554,8 @@ def api_attendance_window_open(request):
         'window_open': True,
         'period': period,
         'period_time': get_period_time_label(period),
-        'window_cutoff': '' if EXPO_SCREENSHOT_MODE else (cutoff.strftime('%I:%M %p') if cutoff else ''),
-        'window_cutoff_iso': '' if EXPO_SCREENSHOT_MODE else (cutoff.isoformat() if cutoff else ''),
-        'expo_mode': EXPO_SCREENSHOT_MODE,
+        'window_cutoff': cutoff.strftime('%I:%M %p') if cutoff else '',
+        'window_cutoff_iso': cutoff.isoformat() if cutoff else '',
         'class_strength': students.count(),
         'message': 'Attendance window opened. Camera can remain active for on-the-spot submissions.',
     })
@@ -606,7 +589,7 @@ def api_mark_attendance(request):
 
     cutoff = get_period_cutoff(period)
     now = timezone.localtime(timezone.now()).replace(tzinfo=None)
-    if (not EXPO_SCREENSHOT_MODE) and cutoff and now > cutoff:
+    if cutoff and now > cutoff:
         created_absent, final_records = close_attendance_window_and_mark_absent(
             faculty, branch, year, section, period
         )
@@ -662,13 +645,6 @@ def api_mark_attendance(request):
         record.status = 'Present'
         record.time = period_start_time
         record.save(update_fields=['status', 'time'])
-
-    # Broadcast attendance update to WebSocket clients
-    try:
-        broadcast_attendance_update_sync(record, recognized_student, faculty)
-    except Exception as e:
-        # Log error but don't fail the request
-        print(f"WebSocket broadcast error: {str(e)}")
 
     # Return today's attendance for that class
     today_records = get_today_class_records(faculty, branch, year, section, period).select_related('student', 'student__user')
@@ -788,133 +764,3 @@ def api_student_dashboard(request):
             'percentage': pct,
         },
     })
-
-
-# ─── Attendance Prediction ───────────────────────────────────
-@api_login_required
-def api_attendance_prediction(request):
-    """
-    Get attendance prediction for current student.
-    Returns: current %, classes needed, and risk level
-    """
-    student = getattr(request.user, 'student_profile', None)
-    if not student:
-        return JsonResponse({'error': 'Not a student'}, status=403)
-    
-    try:
-        target_percentage = float(request.GET.get('target', 75))
-        if target_percentage < 0 or target_percentage > 100:
-            target_percentage = 75
-    except (ValueError, TypeError):
-        target_percentage = 75
-    
-    prediction = StudentAttendancePrediction.get_student_prediction(
-        student,
-        target_percentage=target_percentage
-    )
-    
-    return JsonResponse(prediction)
-
-
-@api_login_required
-def api_student_prediction_by_id(request, registration_id):
-    """
-    Get attendance prediction for a specific student (admin/faculty).
-    Returns: current %, classes needed, and risk level
-    """
-    # Check if user is admin or faculty
-    if not (request.user.is_superuser or hasattr(request.user, 'faculty_profile')):
-        return JsonResponse({'error': 'Admin or faculty access required'}, status=403)
-    
-    try:
-        student = Student.objects.get(registration_id=registration_id)
-    except Student.DoesNotExist:
-        return JsonResponse({'error': 'Student not found'}, status=404)
-    
-    try:
-        target_percentage = float(request.GET.get('target', 75))
-        if target_percentage < 0 or target_percentage > 100:
-            target_percentage = 75
-    except (ValueError, TypeError):
-        target_percentage = 75
-    
-    prediction = StudentAttendancePrediction.get_student_prediction(
-        student,
-        target_percentage=target_percentage
-    )
-    
-    return JsonResponse(prediction)
-
-
-@api_login_required
-def api_class_at_risk_students(request):
-    """
-    Get list of at-risk students in a class (admin/faculty).
-    Query params: branch, year, section, threshold (default: 75)
-    """
-    # Check if user is admin or faculty
-    if not (request.user.is_superuser or hasattr(request.user, 'faculty_profile')):
-        return JsonResponse({'error': 'Admin or faculty access required'}, status=403)
-    
-    branch = request.GET.get('branch', '').strip()
-    year = request.GET.get('year', '').strip()
-    section = request.GET.get('section', '').strip()
-    
-    if not all([branch, year, section]):
-        return JsonResponse({
-            'error': 'Missing required parameters: branch, year, section'
-        }, status=400)
-    
-    try:
-        threshold = float(request.GET.get('threshold', 75))
-        if threshold < 0 or threshold > 100:
-            threshold = 75
-    except (ValueError, TypeError):
-        threshold = 75
-    
-    at_risk_students = StudentAttendancePrediction.get_class_at_risk_students(
-        branch=branch,
-        year=year,
-        section=section,
-        threshold=threshold
-    )
-    
-    return JsonResponse({
-        'class': {
-            'branch': branch,
-            'year': year,
-            'section': section,
-            'threshold': threshold
-        },
-        'at_risk_students': at_risk_students,
-        'total_at_risk': len(at_risk_students)
-    })
-
-
-@api_login_required
-@require_http_methods(["POST"])
-def api_calculate_prediction(request):
-    """
-    Calculate attendance prediction with manual input.
-    POST params: total_classes, attended_classes, target_percentage (optional, default: 75)
-    """
-    try:
-        total_classes = int(request.POST.get('total_classes', 0))
-        attended_classes = int(request.POST.get('attended_classes', 0))
-        target_percentage = float(request.POST.get('target_percentage', 75))
-        
-        if target_percentage < 0 or target_percentage > 100:
-            target_percentage = 75
-        
-        prediction = AttendancePrediction(
-            total_classes=total_classes,
-            attended_classes=attended_classes,
-            target_percentage=target_percentage
-        )
-        
-        return JsonResponse(prediction.to_dict())
-    
-    except ValueError as e:
-        return JsonResponse({'error': str(e)}, status=400)
-    except Exception as e:
-        return JsonResponse({'error': f'Calculation error: {str(e)}'}, status=400)
