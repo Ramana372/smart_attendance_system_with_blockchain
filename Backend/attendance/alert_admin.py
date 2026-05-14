@@ -207,7 +207,7 @@ class DailyAlertLimitAdmin(admin.ModelAdmin):
     
     def at_limit(self, obj):
         if obj.can_send_alert():
-            return format_html('<span style="color: green;">✓ Can Send</span>')
+            return format_html('<span style="color: green;">[OK] Can Send</span>')
         else:
-            return format_html('<span style="color: red;">✗ Limit Reached</span>')
+            return format_html('<span style="color: red;">[FAIL] Limit Reached</span>')
     at_limit.short_description = 'Limit Status'

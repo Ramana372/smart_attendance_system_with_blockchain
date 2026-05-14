@@ -261,7 +261,7 @@ class EmailService:
             <body>
                 <div class="container">
                     <div class="header">
-                        <h2>⚠️ Attendance Warning - Below Threshold</h2>
+                        <h2>[ALERT] Attendance Warning - Below Threshold</h2>
                     </div>
                     <div class="content">
                         <p>Dear <strong>{context['student_name']}</strong>,</p>
@@ -281,7 +281,7 @@ class EmailService:
                             </div>
                         </div>
                         
-                        <p><strong style="color: #d63031;">⚠️ Important:</strong> 
+                        <p><strong style="color: #d63031;">IMPORTANT:</strong> 
                            This may affect your academic performance and eligibility. 
                            Please improve your attendance immediately.</p>
                     </div>

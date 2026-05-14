@@ -15,10 +15,11 @@ import json
 from django.utils import timezone
 import asyncio
 
-from .models import Student, Faculty, Attendance
+from .models import Student, Faculty, Attendance, Course
 from .embedding_utils import save_student_embedding
 from .websocket_utils import broadcast_attendance_update_sync
 from .prediction_utils import AttendancePrediction, StudentAttendancePrediction
+from blockchain.blockchain_operations import get_blockchain_storage
 
 
 PERIOD_TIME_SLOTS = {
@@ -806,6 +807,22 @@ def api_mark_attendance(request):
         record.time = period_start_time
         record.save(update_fields=['status', 'time'])
 
+    # Store on Blockchain
+    try:
+        storage = get_blockchain_storage()
+        res = storage.store_attendance_async_safe(
+            recognized_student.registration_id,
+            str(course.id) if course else "0",
+            str(date.today()),
+            str(period_start_time)
+        )
+        if res.get('success'):
+            record.blockchain_tx = res.get('transaction_hash')
+            record.blockchain_status = 'confirmed'
+            record.save(update_fields=['blockchain_tx', 'blockchain_status'])
+    except Exception as e:
+        print(f"Blockchain storage error: {str(e)}")
+
     # Broadcast attendance update to WebSocket clients
     try:
         broadcast_attendance_update_sync(record, recognized_student, faculty)
@@ -971,6 +988,22 @@ def api_mark_attendance_multi(request):
                     record.time = period_start_time
                     record.confidence_score = confidence
                     record.save(update_fields=['status', 'time', 'confidence_score'])
+                
+                # Store on Blockchain
+                try:
+                    storage = get_blockchain_storage()
+                    res = storage.store_attendance_async_safe(
+                        recognized_student.registration_id,
+                        str(course.id) if course else "0",
+                        str(date.today()),
+                        str(period_start_time)
+                    )
+                    if res.get('success'):
+                        record.blockchain_tx = res.get('transaction_hash')
+                        record.blockchain_status = 'confirmed'
+                        record.save(update_fields=['blockchain_tx', 'blockchain_status'])
+                except Exception as e:
+                    print(f"Blockchain storage error for {reg_id}: {str(e)}")
                 
                 marked_students.append({
                     'registration_id': reg_id,

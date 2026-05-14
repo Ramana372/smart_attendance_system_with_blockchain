@@ -1392,7 +1392,7 @@ const FacultyDashboard = () => {
       }
       formData.append('face_image_data', imageData);
 
-      const response = await fetch('/api/attendance/mark/', {
+      const response = await fetch('/api/attendance/mark/multi/', {
         method: 'POST', body: formData, credentials: 'include',
       });
       const result = await response.json();
@@ -1404,15 +1404,35 @@ const FacultyDashboard = () => {
       }
 
       if (result.success) {
-        const newRec = {
-          id:         Date.now(),
-          name:       result.student_name || 'Recognized',
-          confidence: result.confidence   || 0.95,
-          timestamp:  new Date().toLocaleTimeString(),
-          avatar:     ['👨‍🎓', '👩‍🎓'][Math.floor(Math.random() * 2)],
-        };
-        setRecognitions(prev => [newRec, ...prev]);
-        toast.success(`✓ ${result.student_name} marked present`);
+        const markedStudents = Array.isArray(result.marked_students) ? result.marked_students : [];
+        const newRecognitions = markedStudents.map((student) => ({
+          id: Date.now() + Math.random(),
+          name: student.name || student.registration_id || 'Recognized',
+          confidence: student.confidence || 0.95,
+          timestamp: new Date().toLocaleTimeString(),
+          avatar: ['👨‍🎓', '👩‍🎓'][Math.floor(Math.random() * 2)],
+        }));
+
+        if (newRecognitions.length > 0) {
+          setRecognitions((prev) => [...newRecognitions, ...prev]);
+        }
+
+        const totalMarked = result.total_marked ?? newRecognitions.length;
+        const unknownFacesCount = result.unknown_faces_count || 0;
+        const totalFacesDetected = result.total_faces_detected || totalMarked + unknownFacesCount;
+        const summaryMessage = result.message || `Successfully marked attendance for ${totalMarked} student(s).`;
+
+        if (newRecognitions.length === 1) {
+          toast.success(`✓ ${newRecognitions[0].name} marked present`);
+        } else if (newRecognitions.length > 1) {
+          toast.success(`✓ ${totalMarked} students marked present`);
+        } else {
+          toast.success(summaryMessage);
+        }
+
+        if (unknownFacesCount > 0) {
+          toast.warning(`${unknownFacesCount} unknown face(s) detected out of ${totalFacesDetected} face(s).`);
+        }
       }
     } catch (error) {
       toast.error('Error marking attendance: ' + error.message);

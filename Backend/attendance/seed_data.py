@@ -237,7 +237,7 @@ try:
 
     print(f"  + Created {att_count} attendance records for CS301 (Data Structures)")
 except Exception as e:
-    print(f"  ✗ Error creating attendance records: {e}")
+    print(f"  [FAIL] Error creating attendance records: {e}")
 
 # Generate attendance for CS502
 try:
@@ -272,7 +272,7 @@ try:
 
     print(f"  + Created {att_count} attendance records for CS502 (Computer Networks)")
 except Exception as e:
-    print(f"  ✗ Error creating attendance records: {e}")
+    print(f"  [FAIL] Error creating attendance records: {e}")
 
 print()
 print("=" * 60)

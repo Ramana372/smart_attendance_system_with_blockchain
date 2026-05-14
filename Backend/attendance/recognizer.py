@@ -46,7 +46,7 @@ def get_face_embedding(image_array):
         return None
     
     try:
-        mtcnn = get_face_detector()
+        mtcnn = get_face_detector(keep_all=False)
         resnet = get_face_encoder()
         
         # Convert numpy array to PIL Image
@@ -79,7 +79,7 @@ def get_multiple_face_embeddings(image_array):
         return []
     
     try:
-        mtcnn = get_face_detector()
+        mtcnn = get_face_detector(keep_all=True)
         resnet = get_face_encoder()
         
         # Convert numpy array to PIL Image
@@ -162,14 +162,14 @@ def Recognizer(details, face_image_data=None):
     for student in students:
         # Load student's stored embedding
         if not student.face_embedding:
-            print(f"⚠ No embedding stored for {student.registration_id}")
+            print(f"[WARN] No embedding stored for {student.registration_id}")
             continue
         
         students_with_embeddings += 1
         student_embedding = json_to_embedding(student.face_embedding)
         
         if student_embedding is None:
-            print(f"⚠ Invalid embedding for {student.registration_id}")
+            print(f"[WARN] Invalid embedding for {student.registration_id}")
             continue
         
         # Compare embeddings
@@ -181,7 +181,7 @@ def Recognizer(details, face_image_data=None):
     return recognized
 
 
-def MultiRecognizer(details, face_image_data=None, similarity_threshold=0.6):
+def MultiRecognizer(details, face_image_data=None, similarity_threshold=0.7):
     """
     Multi-face recognition using stored embeddings:
       - details dict contains 'branch', 'year', 'section', 'period'
@@ -244,12 +244,12 @@ def MultiRecognizer(details, face_image_data=None, similarity_threshold=0.6):
     
     for student in students:
         if not student.face_embedding:
-            print(f"⚠ No embedding stored for {student.registration_id}")
+            print(f"[WARN] No embedding stored for {student.registration_id}")
             continue
         
         student_embedding = json_to_embedding(student.face_embedding)
         if student_embedding is None:
-            print(f"⚠ Invalid embedding for {student.registration_id}")
+            print(f"[WARN] Invalid embedding for {student.registration_id}")
             continue
         
         student_embeddings[student.registration_id] = {
@@ -261,55 +261,65 @@ def MultiRecognizer(details, face_image_data=None, similarity_threshold=0.6):
     print(f"Loaded {students_with_embeddings} student embeddings")
     
     # Match each detected face against all student embeddings
+    # We use a greedy assignment: best match for each student
     recognized_students = []
-    recognized_ids = set()  # Track to prevent duplicates
-    unknown_faces = 0
+    student_to_best_match = {} # student_id -> {'face_idx', 'similarity', 'student_data'}
     
-    for face_data in detected_faces:
+    for face_idx, face_data in enumerate(detected_faces):
+        # Skip low confidence detections (MTCNN likely misidentified an object like a door)
+        if face_data['confidence'] < 0.9:
+            print(f"[FAIL] Face {face_idx + 1} skipped (low detection confidence: {face_data['confidence']:.3f})")
+            continue
+
         captured_embedding = face_data['embedding']
-        face_idx = face_data['face_index']
         
-        best_match = None
-        best_similarity = 0.0
+        # Find best matching student for THIS detected face
+        current_best_id = None
+        current_best_sim = 0.0
         
-        # Find best matching student for this face
         for reg_id, student_data in student_embeddings.items():
             student_embedding = student_data['embedding']
             
             # Calculate cosine similarity
             similarity = np.dot(captured_embedding, student_embedding) / (
-                np.linalg.norm(captured_embedding) * np.linalg.norm(student_embedding)
+                max(1e-9, np.linalg.norm(captured_embedding)) * max(1e-9, np.linalg.norm(student_embedding))
             )
             
-            if similarity > best_similarity and similarity > similarity_threshold:
-                best_similarity = similarity
-                best_match = {
-                    'registration_id': reg_id,
-                    'student': student_data['student'],
-                    'confidence': float(similarity)
+            if similarity > current_best_sim and similarity > similarity_threshold:
+                current_best_sim = similarity
+                current_best_id = reg_id
+
+        if current_best_id:
+            # We found a potential student match for this face.
+            # Check if this student already has an even better match from a different face in this photo
+            if current_best_id not in student_to_best_match or current_best_sim > student_to_best_match[current_best_id]['similarity']:
+                student_to_best_match[current_best_id] = {
+                    'face_idx': face_idx,
+                    'similarity': float(current_best_sim),
+                    'student': student_embeddings[current_best_id]['student']
                 }
-        
-        if best_match:
-            # Check if this student was already recognized (prevent duplicates)
-            if best_match['registration_id'] not in recognized_ids:
-                recognized_ids.add(best_match['registration_id'])
-                student = best_match['student']
-                recognized_students.append({
-                    'registration_id': best_match['registration_id'],
-                    'name': f"{student.first_name} {student.last_name}",
-                    'confidence': best_match['confidence']
-                })
-                print(f"[OK] Face {face_idx + 1} recognized: {best_match['registration_id']} (confidence: {best_match['confidence']:.3f})")
-            else:
-                print(f"[WARN] Face {face_idx + 1} matched {best_match['registration_id']} but already recognized (duplicate)")
+                print(f"[OK] Face {face_idx + 1} match: {current_best_id} ({current_best_sim:.3f})")
         else:
-            unknown_faces += 1
-            print(f"[FAIL] Face {face_idx + 1}: Unknown (no match above threshold {similarity_threshold})")
+            print(f"[FAIL] Face {face_idx + 1}: No match found above threshold {similarity_threshold}")
+
+    # Build final recognition list from best matches
+    for reg_id, match_data in student_to_best_match.items():
+        student = match_data['student']
+        recognized_students.append({
+            'registration_id': reg_id,
+            'name': f"{student.first_name} {student.last_name}",
+            'confidence': match_data['similarity']
+        })
+
+    # Calculate statistics
+    recognized_face_indices = {m['face_idx'] for m in student_to_best_match.values()}
+    total_valid_faces = len([f for f in detected_faces if f['confidence'] >= 0.9])
+    unknown_faces_count = total_valid_faces - len(recognized_face_indices)
     
-    print(f"Total recognized: {len(recognized_students)} unique student(s), {unknown_faces} unknown face(s)")
+    print(f"Summary: {len(recognized_students)} student(s) recognized, {unknown_faces_count} unknown face(s)")
     
     return {
         'recognized_students': recognized_students,
-        'unknown_faces_count': unknown_faces,
+        'unknown_faces_count': unknown_faces_count,
         'total_faces_detected': len(detected_faces)
     }

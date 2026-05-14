@@ -16,15 +16,22 @@ except ImportError:
     FACENET_AVAILABLE = False
 
 # Initialize models (lazy loading)
-_mtcnn = None
+_mtcnn_single = None
+_mtcnn_multi = None
 _resnet = None
 
-def get_face_detector():
+def get_face_detector(keep_all=False):
     """Lazy load MTCNN face detector"""
-    global _mtcnn
-    if _mtcnn is None and FACENET_AVAILABLE:
-        _mtcnn = MTCNN(image_size=160, margin=0, device='cpu')
-    return _mtcnn
+    global _mtcnn_single, _mtcnn_multi
+    if not FACENET_AVAILABLE:
+        return None
+    if keep_all:
+        if _mtcnn_multi is None:
+            _mtcnn_multi = MTCNN(image_size=160, margin=20, keep_all=True, device='cpu', thresholds=[0.5, 0.6, 0.6])
+        return _mtcnn_multi
+    if _mtcnn_single is None:
+        _mtcnn_single = MTCNN(image_size=160, margin=20, keep_all=False, device='cpu', thresholds=[0.5, 0.6, 0.6])
+    return _mtcnn_single
 
 def get_face_encoder():
     """Lazy load InceptionResnet face encoder"""
@@ -113,7 +120,7 @@ def save_student_embedding(student):
     student.face_embedding = embedding_to_json(embedding)
     student.save(update_fields=['face_embedding'])
     
-    print(f"[SUCCESS] Saved embedding for {student.registration_id}")
+    print(f"[OK] Saved embedding for {student.registration_id}")
     return True
 
 def compare_embeddings(embedding1, embedding2, threshold=0.6):

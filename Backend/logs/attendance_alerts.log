@@ -2070,3 +2070,804 @@ INFO 2026-05-14 16:30:38,816 autoreload 24448 5232 Watching for file changes wit
 INFO 2026-05-14 16:30:38,916 server 24448 25468 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
 INFO 2026-05-14 16:30:38,916 server 24448 25468 Configuring endpoint tcp:port=8000:interface=127.0.0.1
 CRITICAL 2026-05-14 16:30:38,916 server 24448 25468 Listen failure: Couldn't listen on 127.0.0.1:8000: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
+INFO 2026-05-14 16:43:36,711 autoreload 16696 26040 Watching for file changes with StatReloader
+INFO 2026-05-14 16:43:37,068 server 16696 5712 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 16:43:37,069 server 16696 5712 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 16:43:37,071 server 16696 5712 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 16:48:08,561 runserver 16696 5712 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:59378]
+INFO 2026-05-14 16:48:08,576 runserver 16696 5712 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:59380]
+INFO 2026-05-14 16:48:08,671 runserver 16696 5712 HTTP GET /api/public/stats/ 200 [0.02, 127.0.0.1:59383]
+INFO 2026-05-14 16:48:08,687 runserver 16696 5712 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:59385]
+INFO 2026-05-14 16:48:24,398 web3_connection 16696 976 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 16:48:24,398 web3_connection 16696 976 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 16:48:24,413 web3_connection 16696 976 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 16:48:24,435 web3_connection 16696 976 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 16:48:24,435 web3_connection 16696 976 Web3 connection module loaded successfully
+INFO 2026-05-14 16:48:24,467 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [2.08, 127.0.0.1:51961]
+INFO 2026-05-14 16:48:24,507 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.03, 127.0.0.1:50816]
+INFO 2026-05-14 16:48:38,169 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.04, 127.0.0.1:53210]
+INFO 2026-05-14 16:48:53,144 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.02, 127.0.0.1:51227]
+INFO 2026-05-14 16:49:08,165 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.04, 127.0.0.1:49695]
+INFO 2026-05-14 16:49:23,148 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.03, 127.0.0.1:62341]
+INFO 2026-05-14 16:49:38,156 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.04, 127.0.0.1:59411]
+INFO 2026-05-14 16:49:53,182 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.06, 127.0.0.1:60571]
+INFO 2026-05-14 16:50:08,153 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.03, 127.0.0.1:52615]
+INFO 2026-05-14 16:50:56,177 runserver 16696 5712 HTTP GET /api/blockchain/info/ 200 [0.06, 127.0.0.1:56374]
+INFO 2026-05-14 16:51:50,174 autoreload 16696 26040 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\api_views.py changed, reloading.
+INFO 2026-05-14 16:51:54,129 autoreload 26296 20152 Watching for file changes with StatReloader
+INFO 2026-05-14 16:51:54,220 server 26296 3168 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 16:51:54,221 server 26296 3168 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 16:51:54,222 server 26296 3168 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 16:51:57,166 web3_connection 26296 12204 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 16:51:57,166 web3_connection 26296 12204 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 16:51:57,192 web3_connection 26296 12204 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 16:51:57,201 web3_connection 26296 12204 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 16:51:57,201 web3_connection 26296 12204 Web3 connection module loaded successfully
+INFO 2026-05-14 16:51:57,216 runserver 26296 3168 HTTP GET /api/blockchain/info/ 200 [1.09, 127.0.0.1:57043]
+INFO 2026-05-14 16:52:02,552 runserver 26296 3168 HTTP GET /api/public/stats/ 200 [0.03, 127.0.0.1:58641]
+INFO 2026-05-14 16:52:02,596 runserver 26296 3168 HTTP GET /api/public/stats/ 200 [0.03, 127.0.0.1:64387]
+INFO 2026-05-14 16:52:10,432 runserver 26296 3168 HTTP POST /api/auth/login/ 200 [0.75, 127.0.0.1:56884]
+INFO 2026-05-14 16:52:10,602 runserver 26296 3168 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:50585]
+INFO 2026-05-14 16:52:10,615 runserver 26296 3168 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:50587]
+INFO 2026-05-14 16:53:33,929 autoreload 26296 20152 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\api_views.py changed, reloading.
+INFO 2026-05-14 16:53:37,880 autoreload 4468 26596 Watching for file changes with StatReloader
+INFO 2026-05-14 16:53:38,838 web3_connection 4468 26596 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 16:53:38,838 web3_connection 4468 26596 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 16:53:38,845 web3_connection 4468 26596 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 16:53:38,853 web3_connection 4468 26596 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 16:53:38,853 web3_connection 4468 26596 Web3 connection module loaded successfully
+INFO 2026-05-14 16:53:38,926 server 4468 24276 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 16:53:38,927 server 4468 24276 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 16:53:38,927 server 4468 24276 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 17:06:48,141 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:62524]
+INFO 2026-05-14 17:06:48,162 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:62526]
+INFO 2026-05-14 17:07:06,954 autoreload 14676 23904 Watching for file changes with StatReloader
+INFO 2026-05-14 17:07:29,328 autoreload 28476 20328 Watching for file changes with StatReloader
+INFO 2026-05-14 17:07:56,446 runserver 4468 24276 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:62084]
+INFO 2026-05-14 17:07:57,273 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.38, 127.0.0.1:60133]
+INFO 2026-05-14 17:07:58,497 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.16, 127.0.0.1:60135]
+INFO 2026-05-14 17:08:00,726 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.06, 127.0.0.1:51282]
+INFO 2026-05-14 17:08:00,776 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.04, 127.0.0.1:51284]
+INFO 2026-05-14 17:08:00,962 runserver 4468 24276 HTTP GET /api/public/stats/ 200 [0.02, 127.0.0.1:51286]
+INFO 2026-05-14 17:08:01,238 runserver 4468 24276 HTTP GET /api/public/stats/ 200 [0.26, 127.0.0.1:51288]
+INFO 2026-05-14 17:09:17,426 autoreload 24200 28052 Watching for file changes with StatReloader
+INFO 2026-05-14 17:09:21,689 web3_connection 24200 28052 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 17:09:21,690 web3_connection 24200 28052 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 17:09:21,709 web3_connection 24200 28052 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 17:09:21,735 web3_connection 24200 28052 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 17:09:21,735 web3_connection 24200 28052 Web3 connection module loaded successfully
+INFO 2026-05-14 17:09:23,604 server 24200 21540 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 17:09:23,617 server 24200 21540 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+CRITICAL 2026-05-14 17:09:23,737 server 24200 21540 Listen failure: Couldn't listen on 127.0.0.1:8000: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
+INFO 2026-05-14 17:09:50,969 runserver 4468 24276 HTTP POST /api/auth/login/ 200 [1.21, 127.0.0.1:56535]
+INFO 2026-05-14 17:09:51,943 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.36, 127.0.0.1:61386]
+INFO 2026-05-14 17:09:52,231 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.16, 127.0.0.1:61388]
+INFO 2026-05-14 17:10:02,966 runserver 4468 24276 HTTP GET /api/students/ 200 [0.03, 127.0.0.1:64230]
+INFO 2026-05-14 17:10:03,003 runserver 4468 24276 HTTP GET /api/students/ 200 [0.03, 127.0.0.1:52539]
+INFO 2026-05-14 17:10:26,906 runserver 4468 24276 HTTP POST /api/auth/logout/ 200 [0.03, 127.0.0.1:60171]
+INFO 2026-05-14 17:10:27,183 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.04, 127.0.0.1:63495]
+INFO 2026-05-14 17:10:27,237 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.04, 127.0.0.1:63497]
+WARNING 2026-05-14 17:10:30,997 log 4468 2636 Unauthorized: /api/auth/login/
+WARNING 2026-05-14 17:10:30,999 runserver 4468 24276 HTTP POST /api/auth/login/ 401 [1.30, 127.0.0.1:63499]
+INFO 2026-05-14 17:10:31,714 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:52054]
+INFO 2026-05-14 17:10:31,928 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.18, 127.0.0.1:52057]
+INFO 2026-05-14 17:10:37,343 runserver 4468 24276 HTTP POST /api/auth/login/ 200 [1.83, 127.0.0.1:52061]
+INFO 2026-05-14 17:10:39,794 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.18, 127.0.0.1:58517]
+INFO 2026-05-14 17:10:39,864 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:58519]
+INFO 2026-05-14 17:10:40,055 runserver 4468 24276 HTTP GET /api/faculty/dashboard/ 200 [0.16, 127.0.0.1:56363]
+INFO 2026-05-14 17:10:40,109 runserver 4468 24276 HTTP GET /api/faculty/dashboard/ 200 [0.03, 127.0.0.1:56365]
+INFO 2026-05-14 17:10:47,937 runserver 4468 24276 HTTP POST /api/attendance/window/open/ 200 [0.05, 127.0.0.1:57730]
+WARNING 2026-05-14 17:11:07,424 log 4468 2636 Bad Request: /api/attendance/mark/
+WARNING 2026-05-14 17:11:07,426 runserver 4468 24276 HTTP POST /api/attendance/mark/ 400 [6.06, 127.0.0.1:51434]
+WARNING 2026-05-14 17:11:55,399 log 4468 2636 Bad Request: /api/attendance/window/open/
+WARNING 2026-05-14 17:11:55,400 runserver 4468 24276 HTTP POST /api/attendance/window/open/ 400 [0.03, 127.0.0.1:64800]
+INFO 2026-05-14 17:12:04,339 runserver 4468 24276 HTTP POST /api/attendance/window/open/ 200 [0.03, 127.0.0.1:50252]
+WARNING 2026-05-14 17:12:30,316 log 4468 2636 Bad Request: /api/attendance/mark/
+WARNING 2026-05-14 17:12:30,318 runserver 4468 24276 HTTP POST /api/attendance/mark/ 400 [7.23, 127.0.0.1:49674]
+INFO 2026-05-14 17:13:35,466 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.05, 127.0.0.1:50064]
+INFO 2026-05-14 17:13:35,735 runserver 4468 24276 HTTP GET /media/Faculty_Images/Venkat_s.jpg 304 [0.22, 127.0.0.1:57242]
+INFO 2026-05-14 17:13:35,738 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.26, 127.0.0.1:52902]
+INFO 2026-05-14 17:13:44,709 runserver 4468 24276 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:49393]
+INFO 2026-05-14 17:13:45,453 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.34, 127.0.0.1:55135]
+INFO 2026-05-14 17:13:45,890 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.29, 127.0.0.1:55137]
+INFO 2026-05-14 17:13:50,414 runserver 4468 24276 HTTP POST /api/auth/login/ 200 [1.18, 127.0.0.1:55139]
+INFO 2026-05-14 17:13:52,653 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.35, 127.0.0.1:51040]
+INFO 2026-05-14 17:13:52,734 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.35, 127.0.0.1:51042]
+INFO 2026-05-14 17:13:53,152 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.42, 127.0.0.1:51044]
+INFO 2026-05-14 17:13:53,337 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.42, 127.0.0.1:51046]
+INFO 2026-05-14 17:13:56,035 runserver 4468 24276 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:53230]
+INFO 2026-05-14 17:13:56,222 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.04, 127.0.0.1:51427]
+INFO 2026-05-14 17:13:56,337 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:51429]
+INFO 2026-05-14 17:14:02,052 runserver 4468 24276 HTTP POST /api/auth/login/ 200 [1.50, 127.0.0.1:51431]
+INFO 2026-05-14 17:14:02,631 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.08, 127.0.0.1:60447]
+INFO 2026-05-14 17:14:02,657 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.09, 127.0.0.1:60449]
+INFO 2026-05-14 17:14:02,716 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.06, 127.0.0.1:60451]
+INFO 2026-05-14 17:14:02,881 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.21, 127.0.0.1:60453]
+WARNING 2026-05-14 17:14:08,336 log 4468 2636 Not Found: /api/attendance/certificate/
+WARNING 2026-05-14 17:14:08,337 runserver 4468 24276 HTTP GET /api/attendance/certificate/ 404 [0.03, 127.0.0.1:52011]
+INFO 2026-05-14 17:14:08,404 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.04, 127.0.0.1:55518]
+INFO 2026-05-14 17:14:12,409 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.03, 127.0.0.1:63772]
+INFO 2026-05-14 17:14:30,954 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:55876]
+INFO 2026-05-14 17:14:31,079 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:62795]
+INFO 2026-05-14 17:14:31,126 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.16, 127.0.0.1:62793]
+INFO 2026-05-14 17:14:31,209 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.06, 127.0.0.1:62797]
+INFO 2026-05-14 17:14:31,492 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.21, 127.0.0.1:65049]
+INFO 2026-05-14 17:14:31,669 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.06, 127.0.0.1:61293]
+INFO 2026-05-14 17:14:33,412 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.15, 127.0.0.1:57700]
+INFO 2026-05-14 17:14:33,699 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.43, 127.0.0.1:57702]
+INFO 2026-05-14 17:14:33,873 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.44, 127.0.0.1:57704]
+INFO 2026-05-14 17:14:34,261 runserver 4468 24276 HTTP GET /api/student/dashboard/ 200 [0.40, 127.0.0.1:57706]
+INFO 2026-05-14 17:14:39,267 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.10, 127.0.0.1:52090]
+INFO 2026-05-14 17:14:39,366 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.07, 127.0.0.1:53827]
+INFO 2026-05-14 17:14:59,480 runserver 4468 24276 HTTP POST /api/auth/logout/ 200 [0.07, 127.0.0.1:60917]
+INFO 2026-05-14 17:15:00,004 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:57790]
+INFO 2026-05-14 17:15:00,338 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.31, 127.0.0.1:57792]
+INFO 2026-05-14 17:15:07,724 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:59412]
+INFO 2026-05-14 17:15:07,741 runserver 4468 24276 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:59414]
+INFO 2026-05-14 17:15:07,870 runserver 4468 24276 HTTP GET /api/public/stats/ 200 [0.03, 127.0.0.1:59416]
+INFO 2026-05-14 17:15:07,911 runserver 4468 24276 HTTP GET /api/public/stats/ 200 [0.03, 127.0.0.1:59418]
+INFO 2026-05-14 17:15:10,141 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.23, 127.0.0.1:57153]
+INFO 2026-05-14 17:15:11,070 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.23, 127.0.0.1:49674]
+INFO 2026-05-14 17:15:24,961 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.05, 127.0.0.1:57182]
+INFO 2026-05-14 17:15:39,984 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.07, 127.0.0.1:63328]
+INFO 2026-05-14 17:15:54,970 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.05, 127.0.0.1:56164]
+INFO 2026-05-14 17:16:09,954 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.04, 127.0.0.1:54972]
+INFO 2026-05-14 17:16:24,967 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.05, 127.0.0.1:53102]
+INFO 2026-05-14 17:16:40,046 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.13, 127.0.0.1:58756]
+INFO 2026-05-14 17:16:41,965 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.05, 127.0.0.1:56570]
+INFO 2026-05-14 17:16:55,441 runserver 4468 24276 HTTP GET /api/blockchain/info/ 200 [0.05, 127.0.0.1:57227]
+INFO 2026-05-14 17:17:09,101 runserver 4468 24276 HTTP GET /api/public/stats/ 200 [0.92, 127.0.0.1:52282]
+INFO 2026-05-14 17:17:09,465 runserver 4468 24276 HTTP GET /api/public/stats/ 200 [0.32, 127.0.0.1:62384]
+INFO 2026-05-14 17:21:43,955 autoreload 14768 26176 Watching for file changes with StatReloader
+INFO 2026-05-14 17:21:45,143 web3_connection 14768 26176 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 17:21:45,144 web3_connection 14768 26176 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 17:21:45,153 web3_connection 14768 26176 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 17:21:45,160 web3_connection 14768 26176 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 17:21:45,160 web3_connection 14768 26176 Web3 connection module loaded successfully
+INFO 2026-05-14 17:21:45,253 server 14768 27480 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 17:21:45,253 server 14768 27480 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 17:21:45,253 server 14768 27480 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 17:22:17,876 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:50157]
+INFO 2026-05-14 17:22:17,892 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:50159]
+INFO 2026-05-14 17:22:18,035 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.02, 127.0.0.1:50161]
+INFO 2026-05-14 17:22:18,058 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:50163]
+INFO 2026-05-14 17:27:27,911 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:53082]
+INFO 2026-05-14 17:27:27,945 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:53084]
+INFO 2026-05-14 17:27:28,130 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.08, 127.0.0.1:53086]
+INFO 2026-05-14 17:27:28,172 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.03, 127.0.0.1:58628]
+INFO 2026-05-14 17:27:37,966 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:55281]
+INFO 2026-05-14 17:27:38,059 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.08, 127.0.0.1:55283]
+INFO 2026-05-14 17:27:39,047 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.78, 127.0.0.1:55285]
+INFO 2026-05-14 17:27:39,650 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.58, 127.0.0.1:55287]
+INFO 2026-05-14 17:27:50,404 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.10, 127.0.0.1:56114]
+INFO 2026-05-14 17:27:50,847 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.28, 127.0.0.1:63850]
+INFO 2026-05-14 17:27:51,183 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.44, 127.0.0.1:63852]
+INFO 2026-05-14 17:27:51,346 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.48, 127.0.0.1:63854]
+INFO 2026-05-14 17:27:51,596 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.29, 127.0.0.1:63856]
+INFO 2026-05-14 17:27:56,494 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:63745]
+INFO 2026-05-14 17:27:56,621 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:62857]
+INFO 2026-05-14 17:28:07,563 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:54514]
+INFO 2026-05-14 17:28:11,584 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:58742]
+INFO 2026-05-14 17:28:22,447 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:56634]
+INFO 2026-05-14 17:28:22,668 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:59799]
+INFO 2026-05-14 17:28:22,701 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:59801]
+INFO 2026-05-14 17:28:29,521 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.20, 127.0.0.1:59803]
+INFO 2026-05-14 17:28:30,093 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.39, 127.0.0.1:49674]
+INFO 2026-05-14 17:28:30,282 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.16, 127.0.0.1:49677]
+INFO 2026-05-14 17:28:35,464 runserver 14768 27480 HTTP GET /api/students/ 200 [0.02, 127.0.0.1:49680]
+INFO 2026-05-14 17:28:35,504 runserver 14768 27480 HTTP GET /api/students/ 200 [0.03, 127.0.0.1:49682]
+INFO 2026-05-14 17:28:47,452 runserver 14768 27480 HTTP POST /api/students/31/update/ 200 [0.04, 127.0.0.1:61530]
+INFO 2026-05-14 17:28:47,770 runserver 14768 27480 HTTP GET /api/students/ 200 [0.31, 127.0.0.1:64493]
+INFO 2026-05-14 17:28:51,405 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:59608]
+INFO 2026-05-14 17:28:51,682 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:50972]
+INFO 2026-05-14 17:28:51,703 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:50974]
+INFO 2026-05-14 17:28:57,536 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.18, 127.0.0.1:50976]
+INFO 2026-05-14 17:28:58,089 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.09, 127.0.0.1:55830]
+INFO 2026-05-14 17:28:58,324 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.29, 127.0.0.1:55832]
+INFO 2026-05-14 17:28:58,499 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.39, 127.0.0.1:55834]
+INFO 2026-05-14 17:28:58,674 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.22, 127.0.0.1:55836]
+INFO 2026-05-14 17:29:02,689 runserver 14768 27480 HTTP POST /api/attendance/window/open/ 200 [0.02, 127.0.0.1:57476]
+INFO 2026-05-14 17:29:11,336 blockchain_operations 14768 27920 Storing attendance on blockchain for 12212302
+INFO 2026-05-14 17:29:11,758 blockchain_operations 14768 27920 Transaction sent: 0xb83c8b23bfb03f93dad4d1b8ee1a0656ac87264e766ce8e757809b768acbac28
+INFO 2026-05-14 17:29:11,779 blockchain_operations 14768 27920 Attendance stored successfully. TxHash: 0xb83c8b23bfb03f93dad4d1b8ee1a0656ac87264e766ce8e757809b768acbac28, Block: 34, Gas Used: 22872
+INFO 2026-05-14 17:29:11,920 runserver 14768 27480 HTTP POST /api/attendance/mark/ 200 [5.42, 127.0.0.1:53529]
+WARNING 2026-05-14 17:29:41,739 log 14768 25156 Bad Request: /api/attendance/mark/
+WARNING 2026-05-14 17:29:41,741 runserver 14768 27480 HTTP POST /api/attendance/mark/ 400 [4.36, 127.0.0.1:49177]
+INFO 2026-05-14 17:31:25,662 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:62469]
+INFO 2026-05-14 17:31:25,685 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:62471]
+INFO 2026-05-14 17:31:29,926 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:62502]
+INFO 2026-05-14 17:31:29,971 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.04, 127.0.0.1:62506]
+INFO 2026-05-14 17:31:30,047 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.03, 127.0.0.1:62508]
+INFO 2026-05-14 17:31:30,082 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.02, 127.0.0.1:62510]
+INFO 2026-05-14 17:31:54,701 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:54523]
+INFO 2026-05-14 17:31:54,736 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:54525]
+INFO 2026-05-14 17:32:01,634 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:58927]
+INFO 2026-05-14 17:32:01,769 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:58929]
+INFO 2026-05-14 17:32:01,801 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.12, 127.0.0.1:58931]
+INFO 2026-05-14 17:32:01,898 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.09, 127.0.0.1:58933]
+INFO 2026-05-14 17:32:14,604 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.11, 127.0.0.1:57500]
+INFO 2026-05-14 17:32:15,053 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.08, 127.0.0.1:56047]
+INFO 2026-05-14 17:32:15,327 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.26, 127.0.0.1:56049]
+INFO 2026-05-14 17:32:54,829 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:61334]
+INFO 2026-05-14 17:32:54,887 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.04, 127.0.0.1:61336]
+INFO 2026-05-14 17:32:55,474 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.08, 127.0.0.1:61338]
+INFO 2026-05-14 17:32:55,567 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.08, 127.0.0.1:61340]
+INFO 2026-05-14 17:33:15,633 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.12, 127.0.0.1:54416]
+INFO 2026-05-14 17:33:15,966 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.13, 127.0.0.1:51094]
+INFO 2026-05-14 17:33:15,981 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.09, 127.0.0.1:51096]
+INFO 2026-05-14 17:33:16,241 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.27, 127.0.0.1:51098]
+INFO 2026-05-14 17:33:16,443 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.45, 127.0.0.1:51100]
+INFO 2026-05-14 17:33:24,483 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:54318]
+INFO 2026-05-14 17:33:24,631 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.13, 127.0.0.1:51674]
+INFO 2026-05-14 17:34:03,651 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:59937]
+INFO 2026-05-14 17:34:03,773 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:59939]
+INFO 2026-05-14 17:34:30,488 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.06, 127.0.0.1:51420]
+INFO 2026-05-14 17:34:31,179 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.18, 127.0.0.1:50083]
+INFO 2026-05-14 17:34:31,351 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.35, 127.0.0.1:50085]
+INFO 2026-05-14 17:34:31,493 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.29, 127.0.0.1:50087]
+INFO 2026-05-14 17:34:31,639 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.18, 127.0.0.1:50089]
+INFO 2026-05-14 17:34:45,684 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:58109]
+INFO 2026-05-14 17:34:45,948 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:55028]
+INFO 2026-05-14 17:34:45,976 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:55030]
+INFO 2026-05-14 17:34:50,796 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.14, 127.0.0.1:55032]
+INFO 2026-05-14 17:34:51,299 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.12, 127.0.0.1:59710]
+INFO 2026-05-14 17:34:51,531 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.22, 127.0.0.1:59712]
+INFO 2026-05-14 17:37:45,239 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:62114]
+INFO 2026-05-14 17:37:45,270 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:62116]
+INFO 2026-05-14 17:39:16,571 runserver 14768 27480 HTTP POST /api/students/add/ 200 [3.99, 127.0.0.1:54051]
+INFO 2026-05-14 17:39:17,880 runserver 14768 27480 HTTP GET /api/students/ 200 [0.06, 127.0.0.1:52666]
+INFO 2026-05-14 17:39:18,371 runserver 14768 27480 HTTP GET /api/students/ 200 [0.47, 127.0.0.1:52855]
+INFO 2026-05-14 17:39:35,062 runserver 14768 27480 HTTP POST /api/students/33/update/ 200 [0.07, 127.0.0.1:50755]
+INFO 2026-05-14 17:39:35,129 runserver 14768 27480 HTTP GET /api/students/ 200 [0.05, 127.0.0.1:62585]
+INFO 2026-05-14 17:39:39,357 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.03, 127.0.0.1:54926]
+INFO 2026-05-14 17:39:39,674 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.07, 127.0.0.1:63429]
+INFO 2026-05-14 17:39:39,705 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:63432]
+INFO 2026-05-14 17:39:43,897 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.21, 127.0.0.1:63435]
+INFO 2026-05-14 17:39:44,439 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.23, 127.0.0.1:56471]
+INFO 2026-05-14 17:39:44,901 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.50, 127.0.0.1:56473]
+INFO 2026-05-14 17:39:45,048 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.58, 127.0.0.1:56475]
+INFO 2026-05-14 17:39:45,116 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.19, 127.0.0.1:56477]
+INFO 2026-05-14 17:39:48,479 runserver 14768 27480 HTTP POST /api/attendance/window/open/ 200 [0.02, 127.0.0.1:61221]
+INFO 2026-05-14 17:39:57,248 blockchain_operations 14768 12676 Storing attendance on blockchain for 12212302
+INFO 2026-05-14 17:39:57,316 blockchain_operations 14768 12676 Transaction sent: 0x6404f685f86d46c02b6c83693f44519edc57de2d3a6bc1efeda4bcf45f95c045
+INFO 2026-05-14 17:39:57,324 blockchain_operations 14768 12676 Attendance stored successfully. TxHash: 0x6404f685f86d46c02b6c83693f44519edc57de2d3a6bc1efeda4bcf45f95c045, Block: 35, Gas Used: 22872
+INFO 2026-05-14 17:39:57,383 runserver 14768 27480 HTTP POST /api/attendance/mark/ 200 [0.90, 127.0.0.1:50335]
+INFO 2026-05-14 17:40:12,902 blockchain_operations 14768 3088 Storing attendance on blockchain for 12212302
+INFO 2026-05-14 17:40:13,259 blockchain_operations 14768 3088 Transaction sent: 0x02952d6b266a673f8baea261213a8b29db79346dcb576841367a69343b7f2d5a
+INFO 2026-05-14 17:40:13,311 blockchain_operations 14768 3088 Attendance stored successfully. TxHash: 0x02952d6b266a673f8baea261213a8b29db79346dcb576841367a69343b7f2d5a, Block: 36, Gas Used: 22872
+INFO 2026-05-14 17:40:13,410 runserver 14768 27480 HTTP POST /api/attendance/mark/ 200 [3.92, 127.0.0.1:50685]
+INFO 2026-05-14 17:40:27,814 blockchain_operations 14768 12576 Storing attendance on blockchain for 12212302
+INFO 2026-05-14 17:40:28,682 blockchain_operations 14768 12576 Transaction sent: 0x90653497f46aa3151804b6a04e171f88c18c4791214e2eb067240d538e4a1fe0
+INFO 2026-05-14 17:40:28,830 blockchain_operations 14768 12576 Attendance stored successfully. TxHash: 0x90653497f46aa3151804b6a04e171f88c18c4791214e2eb067240d538e4a1fe0, Block: 37, Gas Used: 22872
+INFO 2026-05-14 17:40:29,404 runserver 14768 27480 HTTP POST /api/attendance/mark/ 200 [6.04, 127.0.0.1:60311]
+INFO 2026-05-14 17:40:37,568 blockchain_operations 14768 27348 Storing attendance on blockchain for 12210591
+INFO 2026-05-14 17:40:37,776 blockchain_operations 14768 27348 Transaction sent: 0xddec8b78d9ded0eeaee2c3490b289f77c33a5f9823c3132278ceb0541dd68000
+INFO 2026-05-14 17:40:37,825 blockchain_operations 14768 27348 Attendance stored successfully. TxHash: 0xddec8b78d9ded0eeaee2c3490b289f77c33a5f9823c3132278ceb0541dd68000, Block: 38, Gas Used: 22872
+INFO 2026-05-14 17:40:37,896 runserver 14768 27480 HTTP POST /api/attendance/mark/ 200 [1.87, 127.0.0.1:63035]
+WARNING 2026-05-14 17:40:53,873 log 14768 25156 Bad Request: /api/attendance/mark/
+WARNING 2026-05-14 17:40:53,877 runserver 14768 27480 HTTP POST /api/attendance/mark/ 400 [4.49, 127.0.0.1:59042]
+INFO 2026-05-14 17:41:03,513 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:57423]
+INFO 2026-05-14 17:41:04,007 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:50286]
+INFO 2026-05-14 17:41:04,844 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.81, 127.0.0.1:50288]
+INFO 2026-05-14 17:41:10,298 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.10, 127.0.0.1:50294]
+INFO 2026-05-14 17:41:10,935 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.16, 127.0.0.1:63863]
+INFO 2026-05-14 17:41:11,007 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.22, 127.0.0.1:63865]
+INFO 2026-05-14 17:41:11,178 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.23, 127.0.0.1:63867]
+INFO 2026-05-14 17:41:11,214 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.18, 127.0.0.1:63869]
+INFO 2026-05-14 17:41:19,590 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:65052]
+INFO 2026-05-14 17:41:19,771 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:51127]
+INFO 2026-05-14 17:41:19,793 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:51129]
+INFO 2026-05-14 17:41:30,620 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.14, 127.0.0.1:53106]
+INFO 2026-05-14 17:41:30,792 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:59665]
+INFO 2026-05-14 17:41:30,840 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.04, 127.0.0.1:59667]
+INFO 2026-05-14 17:41:31,791 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.67, 127.0.0.1:49674]
+INFO 2026-05-14 17:41:32,386 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.48, 127.0.0.1:49679]
+INFO 2026-05-14 17:41:58,899 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:58845]
+INFO 2026-05-14 17:41:59,239 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.08, 127.0.0.1:54620]
+INFO 2026-05-14 17:41:59,267 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:54622]
+INFO 2026-05-14 17:42:04,233 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.34, 127.0.0.1:54624]
+INFO 2026-05-14 17:42:04,795 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:55055]
+INFO 2026-05-14 17:42:04,929 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.12, 127.0.0.1:55057]
+INFO 2026-05-14 17:44:22,161 runserver 14768 27480 HTTP POST /api/students/add/ 200 [4.55, 127.0.0.1:56342]
+INFO 2026-05-14 17:44:23,432 runserver 14768 27480 HTTP GET /api/students/ 200 [0.02, 127.0.0.1:52499]
+INFO 2026-05-14 17:44:23,684 runserver 14768 27480 HTTP GET /api/students/ 200 [0.24, 127.0.0.1:51195]
+INFO 2026-05-14 17:46:02,446 runserver 14768 27480 HTTP POST /api/students/add/ 200 [3.90, 127.0.0.1:60311]
+INFO 2026-05-14 17:46:03,720 runserver 14768 27480 HTTP GET /api/students/ 200 [0.04, 127.0.0.1:64326]
+INFO 2026-05-14 17:46:03,760 runserver 14768 27480 HTTP GET /api/students/ 200 [0.03, 127.0.0.1:58959]
+INFO 2026-05-14 17:46:08,532 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:62983]
+INFO 2026-05-14 17:46:09,037 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.10, 127.0.0.1:57723]
+INFO 2026-05-14 17:46:09,284 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.21, 127.0.0.1:57725]
+INFO 2026-05-14 17:46:14,733 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.18, 127.0.0.1:57729]
+INFO 2026-05-14 17:46:15,288 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.18, 127.0.0.1:50715]
+INFO 2026-05-14 17:46:15,383 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.20, 127.0.0.1:50717]
+INFO 2026-05-14 17:46:15,706 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.39, 127.0.0.1:50719]
+INFO 2026-05-14 17:46:15,729 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.21, 127.0.0.1:50721]
+INFO 2026-05-14 17:46:29,397 runserver 14768 27480 HTTP POST /api/attendance/window/open/ 200 [0.03, 127.0.0.1:53068]
+INFO 2026-05-14 17:46:38,545 blockchain_operations 14768 25404 Storing attendance on blockchain for 12341234
+INFO 2026-05-14 17:46:44,614 blockchain_operations 14768 25404 Transaction sent: 0x4d16cf78e3272080a8b63f0fe218fc173e01a6e843e7c7d7e3f3511a9fbf335d
+INFO 2026-05-14 17:46:44,634 blockchain_operations 14768 25404 Attendance stored successfully. TxHash: 0x4d16cf78e3272080a8b63f0fe218fc173e01a6e843e7c7d7e3f3511a9fbf335d, Block: 39, Gas Used: 22872
+INFO 2026-05-14 17:46:44,729 runserver 14768 27480 HTTP POST /api/attendance/mark/ 200 [10.83, 127.0.0.1:53402]
+INFO 2026-05-14 17:47:03,380 blockchain_operations 14768 23644 Storing attendance on blockchain for 12341234
+INFO 2026-05-14 17:47:04,347 blockchain_operations 14768 23644 Transaction sent: 0x85bad53fc61c4793fd0b8920dbdb8b1ba801913143932577eed06fe6d4a9d8a3
+INFO 2026-05-14 17:47:04,417 blockchain_operations 14768 23644 Attendance stored successfully. TxHash: 0x85bad53fc61c4793fd0b8920dbdb8b1ba801913143932577eed06fe6d4a9d8a3, Block: 40, Gas Used: 22872
+INFO 2026-05-14 17:47:08,930 runserver 14768 27480 HTTP POST /api/attendance/mark/ 200 [10.33, 127.0.0.1:51484]
+INFO 2026-05-14 17:47:12,985 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.04, 127.0.0.1:51707]
+INFO 2026-05-14 17:47:13,292 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:52808]
+INFO 2026-05-14 17:47:13,331 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:52810]
+INFO 2026-05-14 17:47:33,880 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.11, 127.0.0.1:59148]
+INFO 2026-05-14 17:47:34,507 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.44, 127.0.0.1:50997]
+INFO 2026-05-14 17:47:34,648 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.25, 127.0.0.1:50999]
+INFO 2026-05-14 17:47:35,069 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.43, 127.0.0.1:51001]
+INFO 2026-05-14 17:47:35,176 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.43, 127.0.0.1:50294]
+INFO 2026-05-14 17:47:41,848 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:52744]
+INFO 2026-05-14 17:47:42,244 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:55497]
+INFO 2026-05-14 17:47:42,795 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.52, 127.0.0.1:55499]
+INFO 2026-05-14 17:47:57,059 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.02, 127.0.0.1:62159]
+INFO 2026-05-14 17:47:57,701 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.41, 127.0.0.1:56912]
+INFO 2026-05-14 17:47:57,867 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.30, 127.0.0.1:56914]
+INFO 2026-05-14 17:47:58,140 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.41, 127.0.0.1:56916]
+INFO 2026-05-14 17:47:58,176 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.21, 127.0.0.1:56918]
+INFO 2026-05-14 17:48:07,908 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.02, 127.0.0.1:53801]
+INFO 2026-05-14 17:48:08,298 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.05, 127.0.0.1:51830]
+INFO 2026-05-14 17:48:08,636 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.33, 127.0.0.1:51832]
+INFO 2026-05-14 17:48:14,140 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.25, 127.0.0.1:51838]
+INFO 2026-05-14 17:48:14,531 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.06, 127.0.0.1:61341]
+INFO 2026-05-14 17:48:14,749 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.24, 127.0.0.1:61343]
+INFO 2026-05-14 17:48:14,932 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.38, 127.0.0.1:61345]
+INFO 2026-05-14 17:48:15,110 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.22, 127.0.0.1:61347]
+INFO 2026-05-14 17:48:22,041 runserver 14768 27480 HTTP POST /api/attendance/window/open/ 200 [0.02, 127.0.0.1:60627]
+INFO 2026-05-14 17:48:35,550 blockchain_operations 14768 22472 Storing attendance on blockchain for 12212345
+INFO 2026-05-14 17:48:36,391 blockchain_operations 14768 22472 Transaction sent: 0x0feef0203f59291d9b6a9257b3c28c2a7a473ab0b0c29e42678a1d1e5ca901b6
+INFO 2026-05-14 17:48:36,458 blockchain_operations 14768 22472 Attendance stored successfully. TxHash: 0x0feef0203f59291d9b6a9257b3c28c2a7a473ab0b0c29e42678a1d1e5ca901b6, Block: 41, Gas Used: 22872
+INFO 2026-05-14 17:48:36,921 runserver 14768 27480 HTTP POST /api/attendance/mark/ 200 [10.21, 127.0.0.1:57893]
+INFO 2026-05-14 17:48:41,673 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.11, 127.0.0.1:55588]
+INFO 2026-05-14 17:48:43,168 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.75, 127.0.0.1:58065]
+INFO 2026-05-14 17:48:43,485 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.27, 127.0.0.1:58067]
+INFO 2026-05-14 17:48:56,269 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.13, 127.0.0.1:59215]
+INFO 2026-05-14 17:48:56,979 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.54, 127.0.0.1:50722]
+INFO 2026-05-14 17:48:57,047 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.28, 127.0.0.1:50724]
+INFO 2026-05-14 17:48:57,223 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.24, 127.0.0.1:50726]
+INFO 2026-05-14 17:48:57,245 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.19, 127.0.0.1:50728]
+INFO 2026-05-14 18:02:18,269 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:63979]
+INFO 2026-05-14 18:02:18,388 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.11, 127.0.0.1:63981]
+INFO 2026-05-14 18:02:19,960 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [1.35, 127.0.0.1:63983]
+INFO 2026-05-14 18:02:20,452 runserver 14768 27480 HTTP GET /api/public/stats/ 200 [0.48, 127.0.0.1:63985]
+INFO 2026-05-14 18:02:54,764 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.26, 127.0.0.1:56291]
+INFO 2026-05-14 18:02:55,443 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:65173]
+INFO 2026-05-14 18:03:05,268 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:56816]
+INFO 2026-05-14 18:03:05,828 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.15, 127.0.0.1:56486]
+INFO 2026-05-14 18:03:05,838 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.16, 127.0.0.1:56487]
+INFO 2026-05-14 18:03:05,901 runserver 14768 27480 HTTP GET /api/student/dashboard/ 200 [0.05, 127.0.0.1:56489]
+INFO 2026-05-14 18:03:08,899 runserver 14768 27480 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:56492]
+INFO 2026-05-14 18:03:10,474 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:61778]
+INFO 2026-05-14 18:03:10,805 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.31, 127.0.0.1:51760]
+INFO 2026-05-14 18:03:31,183 runserver 14768 27480 HTTP POST /api/auth/login/ 200 [1.28, 127.0.0.1:54485]
+INFO 2026-05-14 18:03:32,956 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.12, 127.0.0.1:63063]
+INFO 2026-05-14 18:03:33,455 runserver 14768 27480 HTTP GET /api/auth/user/ 200 [0.06, 127.0.0.1:52875]
+INFO 2026-05-14 18:03:33,470 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.05, 127.0.0.1:52878]
+INFO 2026-05-14 18:03:33,506 runserver 14768 27480 HTTP GET /api/faculty/dashboard/ 200 [0.02, 127.0.0.1:52880]
+INFO 2026-05-14 18:03:47,573 runserver 14768 27480 HTTP POST /api/attendance/window/open/ 200 [0.03, 127.0.0.1:56727]
+WARNING 2026-05-14 18:03:59,540 log 14768 25156 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:03:59,543 runserver 14768 27480 HTTP POST /api/attendance/mark/multi/ 400 [0.92, 127.0.0.1:51386]
+WARNING 2026-05-14 18:04:15,103 log 14768 25156 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:04:15,108 runserver 14768 27480 HTTP POST /api/attendance/mark/multi/ 400 [0.72, 127.0.0.1:53497]
+WARNING 2026-05-14 18:04:19,620 log 14768 25156 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:04:19,625 runserver 14768 27480 HTTP POST /api/attendance/mark/multi/ 400 [1.89, 127.0.0.1:60982]
+WARNING 2026-05-14 18:04:43,631 log 14768 25156 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:04:43,641 runserver 14768 27480 HTTP POST /api/attendance/mark/multi/ 400 [1.22, 127.0.0.1:59039]
+INFO 2026-05-14 18:07:15,989 runserver 14768 27480 HTTP POST /api/attendance/window/open/ 200 [0.15, 127.0.0.1:65406]
+WARNING 2026-05-14 18:07:40,507 log 14768 25156 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:07:40,509 runserver 14768 27480 HTTP POST /api/attendance/mark/multi/ 400 [17.32, 127.0.0.1:50228]
+WARNING 2026-05-14 18:08:22,684 log 14768 25156 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:08:22,687 runserver 14768 27480 HTTP POST /api/attendance/mark/multi/ 400 [32.74, 127.0.0.1:61046]
+WARNING 2026-05-14 18:08:54,815 log 14768 25156 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:08:54,825 runserver 14768 27480 HTTP POST /api/attendance/mark/multi/ 400 [5.39, 127.0.0.1:57882]
+INFO 2026-05-14 18:11:17,639 autoreload 14768 26176 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:11:17,770 autoreload 24200 28052 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:11:33,232 autoreload 27908 14072 Watching for file changes with StatReloader
+INFO 2026-05-14 18:11:33,232 autoreload 12316 3128 Watching for file changes with StatReloader
+INFO 2026-05-14 18:11:37,584 web3_connection 12316 3128 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+
+INFO 2026-05-14 18:11:37,584 web3_connection 27908 14072 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:11:37,585 web3_connection 12316 3128 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:11:37,604 web3_connection 27908 14072 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:11:37,613 web3_connection 12316 3128 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:11:37,628 web3_connection 27908 14072 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:11:37,628 web3_connection 27908 14072 Web3 connection module loaded successfully
+INFO 2026-05-14 18:11:37,635 web3_connection 12316 3128 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:11:37,636 web3_connection 12316 3128 Web3 connection module loaded successfully
+INFO 2026-05-14 18:11:38,960 server 27908 24300 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:11:38,960 server 27908 24300 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:11:38,966 server 27908 24300 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:11:38,976 server 12316 2964 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:11:38,976 server 12316 2964 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+CRITICAL 2026-05-14 18:11:38,976 server 12316 2964 Listen failure: Couldn't listen on 127.0.0.1:8000: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
+INFO 2026-05-14 18:11:57,658 runserver 27908 24300 HTTP GET /api/auth/user/ 200 [0.04, 127.0.0.1:61071]
+INFO 2026-05-14 18:11:57,938 runserver 27908 24300 HTTP GET /api/auth/user/ 200 [0.26, 127.0.0.1:61073]
+INFO 2026-05-14 18:12:03,668 runserver 27908 24300 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:65046]
+INFO 2026-05-14 18:12:04,084 runserver 27908 24300 HTTP GET /api/faculty/dashboard/ 200 [0.42, 127.0.0.1:65048]
+INFO 2026-05-14 18:12:04,240 runserver 27908 24300 HTTP GET /api/auth/user/ 200 [0.56, 127.0.0.1:65050]
+INFO 2026-05-14 18:12:04,399 runserver 27908 24300 HTTP GET /api/faculty/dashboard/ 200 [0.18, 127.0.0.1:54623]
+INFO 2026-05-14 18:12:13,172 runserver 27908 24300 HTTP POST /api/attendance/window/open/ 200 [0.04, 127.0.0.1:56640]
+WARNING 2026-05-14 18:12:36,183 log 27908 22176 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:12:36,205 runserver 27908 24300 HTTP POST /api/attendance/mark/multi/ 400 [14.70, 127.0.0.1:51205]
+INFO 2026-05-14 18:12:52,542 runserver 27908 24300 HTTP POST /api/attendance/window/open/ 200 [0.02, 127.0.0.1:63674]
+WARNING 2026-05-14 18:13:06,449 log 27908 22176 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:13:06,450 runserver 27908 24300 HTTP POST /api/attendance/mark/multi/ 400 [4.72, 127.0.0.1:61669]
+WARNING 2026-05-14 18:13:14,140 log 27908 22176 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:13:14,142 runserver 27908 24300 HTTP POST /api/attendance/mark/multi/ 400 [3.63, 127.0.0.1:65207]
+WARNING 2026-05-14 18:13:21,497 log 27908 22176 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:13:21,498 runserver 27908 24300 HTTP POST /api/attendance/mark/multi/ 400 [0.73, 127.0.0.1:50676]
+INFO 2026-05-14 18:14:40,299 autoreload 12316 3128 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:14:40,355 autoreload 27908 14072 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:14:47,725 autoreload 27980 17588 Watching for file changes with StatReloader
+INFO 2026-05-14 18:14:47,742 autoreload 12036 672 Watching for file changes with StatReloader
+INFO 2026-05-14 18:14:49,361 web3_connection 12036 672 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:14:49,361 web3_connection 12036 672 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:14:49,362 web3_connection 27980 17588 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:14:49,362 web3_connection 27980 17588 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:14:49,368 web3_connection 12036 672 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:14:49,368 web3_connection 27980 17588 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:14:49,379 web3_connection 12036 672 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:14:49,380 web3_connection 12036 672 Web3 connection module loaded successfully
+INFO 2026-05-14 18:14:49,381 web3_connection 27980 17588 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:14:49,381 web3_connection 27980 17588 Web3 connection module loaded successfully
+INFO 2026-05-14 18:14:49,486 server 27980 3156 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:14:49,487 server 27980 3156 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:14:49,488 server 27980 3156 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:14:49,500 server 12036 14868 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:14:49,501 server 12036 14868 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+CRITICAL 2026-05-14 18:14:49,501 server 12036 14868 Listen failure: Couldn't listen on 127.0.0.1:8000: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
+INFO 2026-05-14 18:14:54,042 autoreload 27980 17588 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:14:54,106 autoreload 12036 672 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:15:09,374 autoreload 1980 28456 Watching for file changes with StatReloader
+INFO 2026-05-14 18:15:09,380 autoreload 25140 26736 Watching for file changes with StatReloader
+INFO 2026-05-14 18:15:14,857 web3_connection 1980 28456 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:15:14,858 web3_connection 1980 28456 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:15:14,859 web3_connection 25140 26736 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:15:14,861 web3_connection 25140 26736 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:15:14,904 web3_connection 1980 28456 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:15:14,913 web3_connection 25140 26736 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:15:14,950 web3_connection 1980 28456 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:15:14,951 web3_connection 1980 28456 Web3 connection module loaded successfully
+INFO 2026-05-14 18:15:14,995 web3_connection 25140 26736 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:15:14,998 web3_connection 25140 26736 Web3 connection module loaded successfully
+INFO 2026-05-14 18:15:16,838 server 1980 9428 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:15:16,838 server 25140 26760 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:15:16,839 server 1980 9428 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:15:16,839 server 25140 26760 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+CRITICAL 2026-05-14 18:15:16,840 server 25140 26760 Listen failure: Couldn't listen on 127.0.0.1:8000: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
+INFO 2026-05-14 18:15:16,841 server 1980 9428 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:16:03,436 autoreload 21192 7124 Watching for file changes with StatReloader
+INFO 2026-05-14 18:16:04,445 web3_connection 21192 7124 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:16:04,446 web3_connection 21192 7124 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:16:04,457 web3_connection 21192 7124 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:16:04,469 web3_connection 21192 7124 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:16:04,469 web3_connection 21192 7124 Web3 connection module loaded successfully
+INFO 2026-05-14 18:16:04,535 server 21192 28516 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:16:04,535 server 21192 28516 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:16:04,536 server 21192 28516 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:16:30,843 runserver 21192 28516 HTTP POST /api/attendance/window/open/ 200 [0.07, 127.0.0.1:60393]
+WARNING 2026-05-14 18:16:35,222 log 21192 23784 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:16:35,224 runserver 21192 28516 HTTP POST /api/attendance/mark/multi/ 400 [1.75, 127.0.0.1:62098]
+WARNING 2026-05-14 18:16:44,679 log 21192 23784 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:16:44,680 runserver 21192 28516 HTTP POST /api/attendance/mark/multi/ 400 [0.45, 127.0.0.1:61813]
+INFO 2026-05-14 18:16:49,222 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:65001]
+INFO 2026-05-14 18:16:49,448 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:64955]
+INFO 2026-05-14 18:16:49,465 runserver 21192 28516 HTTP GET /api/faculty/dashboard/ 200 [0.02, 127.0.0.1:62139]
+INFO 2026-05-14 18:16:49,484 runserver 21192 28516 HTTP GET /api/faculty/dashboard/ 200 [0.01, 127.0.0.1:62141]
+INFO 2026-05-14 18:16:50,988 runserver 21192 28516 HTTP POST /api/auth/logout/ 200 [0.05, 127.0.0.1:62144]
+INFO 2026-05-14 18:16:51,121 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:62190]
+INFO 2026-05-14 18:16:51,362 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:64665]
+INFO 2026-05-14 18:16:55,970 runserver 21192 28516 HTTP POST /api/auth/login/ 200 [0.97, 127.0.0.1:52543]
+INFO 2026-05-14 18:16:56,148 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:59256]
+INFO 2026-05-14 18:16:56,164 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:60957]
+INFO 2026-05-14 18:17:00,992 runserver 21192 28516 HTTP GET /api/attendance/?search= 200 [0.14, 127.0.0.1:53798]
+INFO 2026-05-14 18:17:01,150 runserver 21192 28516 HTTP GET /api/attendance/?search= 200 [0.14, 127.0.0.1:53800]
+INFO 2026-05-14 18:17:11,262 runserver 21192 28516 HTTP POST /api/auth/logout/ 200 [0.04, 127.0.0.1:53807]
+INFO 2026-05-14 18:17:11,772 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:55360]
+INFO 2026-05-14 18:17:11,785 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:55362]
+INFO 2026-05-14 18:17:19,397 runserver 21192 28516 HTTP POST /api/auth/login/ 200 [1.11, 127.0.0.1:50831]
+INFO 2026-05-14 18:17:19,584 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:61550]
+INFO 2026-05-14 18:17:19,620 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.03, 127.0.0.1:49674]
+INFO 2026-05-14 18:17:19,633 runserver 21192 28516 HTTP GET /api/faculty/dashboard/ 200 [0.03, 127.0.0.1:49677]
+INFO 2026-05-14 18:17:19,851 runserver 21192 28516 HTTP GET /api/faculty/dashboard/ 200 [0.01, 127.0.0.1:53119]
+INFO 2026-05-14 18:17:23,520 runserver 21192 28516 HTTP POST /api/attendance/window/open/ 200 [0.03, 127.0.0.1:64908]
+WARNING 2026-05-14 18:17:29,518 log 21192 23784 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:17:29,519 runserver 21192 28516 HTTP POST /api/attendance/mark/multi/ 400 [0.38, 127.0.0.1:64912]
+WARNING 2026-05-14 18:17:36,401 log 21192 23784 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:17:36,402 runserver 21192 28516 HTTP POST /api/attendance/mark/multi/ 400 [0.44, 127.0.0.1:56267]
+INFO 2026-05-14 18:17:45,642 runserver 21192 28516 HTTP POST /api/attendance/window/open/ 200 [0.03, 127.0.0.1:55507]
+INFO 2026-05-14 18:17:48,471 blockchain_operations 21192 29144 Storing attendance on blockchain for 12212463
+INFO 2026-05-14 18:17:48,501 blockchain_operations 21192 29144 Transaction sent: 0xb10118ddd92436f711d9c856b6676edf7ba37806ee9c01dfbc21495c5f8be78f
+INFO 2026-05-14 18:17:48,506 blockchain_operations 21192 29144 Attendance stored successfully. TxHash: 0xb10118ddd92436f711d9c856b6676edf7ba37806ee9c01dfbc21495c5f8be78f, Block: 42, Gas Used: 22872
+INFO 2026-05-14 18:17:48,521 runserver 21192 28516 HTTP POST /api/attendance/mark/multi/ 200 [0.41, 127.0.0.1:64287]
+WARNING 2026-05-14 18:18:01,489 log 21192 23784 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:18:01,491 runserver 21192 28516 HTTP POST /api/attendance/mark/multi/ 400 [0.35, 127.0.0.1:54179]
+INFO 2026-05-14 18:18:17,177 runserver 21192 28516 HTTP POST /api/auth/logout/ 200 [0.04, 127.0.0.1:58441]
+INFO 2026-05-14 18:18:17,490 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:59768]
+INFO 2026-05-14 18:18:17,601 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:55093]
+INFO 2026-05-14 18:18:23,567 runserver 21192 28516 HTTP POST /api/auth/login/ 200 [0.94, 127.0.0.1:50955]
+INFO 2026-05-14 18:18:23,722 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:54545]
+INFO 2026-05-14 18:18:23,741 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:54547]
+INFO 2026-05-14 18:18:27,498 runserver 21192 28516 HTTP GET /api/attendance/?search= 200 [0.06, 127.0.0.1:58297]
+INFO 2026-05-14 18:18:27,592 runserver 21192 28516 HTTP GET /api/attendance/?search= 200 [0.09, 127.0.0.1:58299]
+INFO 2026-05-14 18:18:54,436 runserver 21192 28516 HTTP POST /api/auth/logout/ 200 [0.04, 127.0.0.1:60569]
+INFO 2026-05-14 18:18:54,791 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:63600]
+INFO 2026-05-14 18:18:54,804 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:65117]
+INFO 2026-05-14 18:19:02,040 runserver 21192 28516 HTTP POST /api/auth/login/ 200 [1.04, 127.0.0.1:55837]
+INFO 2026-05-14 18:19:02,198 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:56340]
+INFO 2026-05-14 18:19:02,214 runserver 21192 28516 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:56005]
+INFO 2026-05-14 18:19:02,459 runserver 21192 28516 HTTP GET /api/faculty/dashboard/ 200 [0.01, 127.0.0.1:61838]
+INFO 2026-05-14 18:19:02,481 runserver 21192 28516 HTTP GET /api/faculty/dashboard/ 200 [0.02, 127.0.0.1:61840]
+INFO 2026-05-14 18:19:07,977 runserver 21192 28516 HTTP POST /api/attendance/window/open/ 200 [0.05, 127.0.0.1:54965]
+WARNING 2026-05-14 18:19:11,789 log 21192 23784 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:19:11,791 runserver 21192 28516 HTTP POST /api/attendance/mark/multi/ 400 [0.47, 127.0.0.1:54971]
+INFO 2026-05-14 18:23:09,748 autoreload 21192 7124 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:23:14,398 autoreload 25736 25564 Watching for file changes with StatReloader
+INFO 2026-05-14 18:23:15,506 web3_connection 25736 25564 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:23:15,506 web3_connection 25736 25564 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:23:15,516 web3_connection 25736 25564 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:23:15,531 web3_connection 25736 25564 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:23:15,531 web3_connection 25736 25564 Web3 connection module loaded successfully
+INFO 2026-05-14 18:23:15,644 server 25736 2228 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:23:15,645 server 25736 2228 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:23:15,646 server 25736 2228 Listening on TCP address 127.0.0.1:8000
+WARNING 2026-05-14 18:23:20,474 log 25736 29592 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:23:20,477 runserver 25736 2228 HTTP POST /api/attendance/mark/multi/ 400 [1.62, 127.0.0.1:60837]
+WARNING 2026-05-14 18:23:23,368 log 25736 29592 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:23:23,369 runserver 25736 2228 HTTP POST /api/attendance/mark/multi/ 400 [0.47, 127.0.0.1:64954]
+INFO 2026-05-14 18:23:42,389 runserver 25736 2228 HTTP POST /api/attendance/window/open/ 200 [0.03, 127.0.0.1:50888]
+WARNING 2026-05-14 18:23:48,019 log 25736 29592 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:23:48,021 runserver 25736 2228 HTTP POST /api/attendance/mark/multi/ 400 [0.40, 127.0.0.1:50195]
+WARNING 2026-05-14 18:23:51,178 log 25736 29592 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:23:51,179 runserver 25736 2228 HTTP POST /api/attendance/mark/multi/ 400 [0.40, 127.0.0.1:49925]
+INFO 2026-05-14 18:24:03,755 runserver 25736 2228 HTTP POST /api/attendance/window/open/ 200 [0.03, 127.0.0.1:53294]
+WARNING 2026-05-14 18:24:06,486 log 25736 29592 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:24:06,488 runserver 25736 2228 HTTP POST /api/attendance/mark/multi/ 400 [0.37, 127.0.0.1:49775]
+WARNING 2026-05-14 18:24:08,633 log 25736 29592 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:24:08,635 runserver 25736 2228 HTTP POST /api/attendance/mark/multi/ 400 [0.33, 127.0.0.1:54382]
+INFO 2026-05-14 18:24:16,838 runserver 25736 2228 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:50105]
+INFO 2026-05-14 18:24:17,020 runserver 25736 2228 HTTP GET /api/auth/user/ 200 [0.06, 127.0.0.1:49241]
+INFO 2026-05-14 18:24:17,057 runserver 25736 2228 HTTP GET /api/faculty/dashboard/ 200 [0.02, 127.0.0.1:50434]
+INFO 2026-05-14 18:24:17,075 runserver 25736 2228 HTTP GET /api/faculty/dashboard/ 200 [0.01, 127.0.0.1:50436]
+INFO 2026-05-14 18:25:17,024 runserver 25736 2228 HTTP POST /api/auth/logout/ 200 [0.03, 127.0.0.1:55265]
+INFO 2026-05-14 18:25:17,462 runserver 25736 2228 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:63195]
+INFO 2026-05-14 18:25:17,473 runserver 25736 2228 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:63197]
+INFO 2026-05-14 18:25:22,623 runserver 25736 2228 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:61289]
+INFO 2026-05-14 18:25:22,637 runserver 25736 2228 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:61291]
+INFO 2026-05-14 18:25:22,748 runserver 25736 2228 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:61293]
+INFO 2026-05-14 18:25:22,764 runserver 25736 2228 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:61295]
+INFO 2026-05-14 18:25:24,826 runserver 25736 2228 HTTP GET /api/blockchain/info/ 200 [0.07, 127.0.0.1:60373]
+INFO 2026-05-14 18:25:25,205 runserver 25736 2228 HTTP GET /api/blockchain/info/ 200 [0.06, 127.0.0.1:52756]
+INFO 2026-05-14 18:25:40,105 runserver 25736 2228 HTTP GET /api/blockchain/info/ 200 [0.04, 127.0.0.1:55112]
+INFO 2026-05-14 18:25:54,789 runserver 25736 2228 HTTP GET /api/blockchain/info/ 200 [0.03, 127.0.0.1:59660]
+INFO 2026-05-14 18:26:10,722 runserver 25736 2228 HTTP GET /api/blockchain/info/ 200 [0.03, 127.0.0.1:63051]
+INFO 2026-05-14 18:26:25,434 runserver 25736 2228 HTTP GET /api/blockchain/info/ 200 [0.05, 127.0.0.1:56850]
+INFO 2026-05-14 18:26:32,718 autoreload 25736 25564 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:26:37,448 autoreload 13128 22452 Watching for file changes with StatReloader
+INFO 2026-05-14 18:26:39,608 web3_connection 13128 22452 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:26:39,609 web3_connection 13128 22452 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:26:39,627 web3_connection 13128 22452 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:26:39,646 web3_connection 13128 22452 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:26:39,647 web3_connection 13128 22452 Web3 connection module loaded successfully
+INFO 2026-05-14 18:26:39,747 server 13128 996 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:26:39,748 server 13128 996 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:26:39,748 server 13128 996 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:26:40,743 runserver 13128 996 HTTP GET /api/blockchain/info/ 200 [0.06, 127.0.0.1:58733]
+INFO 2026-05-14 18:26:55,406 runserver 13128 996 HTTP GET /api/blockchain/info/ 200 [0.03, 127.0.0.1:52333]
+INFO 2026-05-14 18:27:01,505 autoreload 13128 22452 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:27:06,466 autoreload 25352 21744 Watching for file changes with StatReloader
+INFO 2026-05-14 18:27:08,791 web3_connection 25352 21744 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:27:08,791 web3_connection 25352 21744 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:27:08,800 web3_connection 25352 21744 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:27:08,811 web3_connection 25352 21744 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:27:08,812 web3_connection 25352 21744 Web3 connection module loaded successfully
+INFO 2026-05-14 18:27:08,911 server 25352 27032 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:27:08,912 server 25352 27032 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:27:08,914 server 25352 27032 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:27:10,766 runserver 25352 27032 HTTP GET /api/blockchain/info/ 200 [0.08, 127.0.0.1:59306]
+INFO 2026-05-14 18:27:45,799 autoreload 16996 21020 Watching for file changes with StatReloader
+INFO 2026-05-14 18:27:50,439 runserver 25352 27032 HTTP GET /api/blockchain/info/ 200 [0.06, 127.0.0.1:54402]
+INFO 2026-05-14 18:28:33,676 autoreload 25352 21744 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:28:34,035 autoreload 16996 21020 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:28:38,309 autoreload 16888 23680 Watching for file changes with StatReloader
+INFO 2026-05-14 18:28:38,321 autoreload 22132 13172 Watching for file changes with StatReloader
+INFO 2026-05-14 18:28:39,420 web3_connection 22132 13172 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:28:39,420 web3_connection 22132 13172 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:28:39,428 web3_connection 22132 13172 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:28:39,435 web3_connection 22132 13172 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:28:39,435 web3_connection 22132 13172 Web3 connection module loaded successfully
+INFO 2026-05-14 18:28:39,503 server 22132 4284 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:28:39,503 server 22132 4284 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:28:39,504 server 22132 4284 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:28:49,552 autoreload 22132 13172 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:28:53,515 autoreload 20796 16412 Watching for file changes with StatReloader
+INFO 2026-05-14 18:28:54,466 web3_connection 20796 16412 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:28:54,466 web3_connection 20796 16412 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:28:54,499 web3_connection 20796 16412 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:28:54,506 web3_connection 20796 16412 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:28:54,506 web3_connection 20796 16412 Web3 connection module loaded successfully
+INFO 2026-05-14 18:28:54,579 server 20796 23276 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:28:54,580 server 20796 23276 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:28:54,580 server 20796 23276 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:29:50,475 runserver 20796 23276 HTTP GET /api/blockchain/info/ 200 [0.09, 127.0.0.1:51775]
+INFO 2026-05-14 18:29:53,771 autoreload 20796 16412 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:29:58,233 autoreload 25560 17156 Watching for file changes with StatReloader
+INFO 2026-05-14 18:29:59,140 web3_connection 25560 17156 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:29:59,140 web3_connection 25560 17156 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:29:59,146 web3_connection 25560 17156 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:29:59,152 web3_connection 25560 17156 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:29:59,152 web3_connection 25560 17156 Web3 connection module loaded successfully
+INFO 2026-05-14 18:29:59,220 server 25560 26376 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:29:59,220 server 25560 26376 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:29:59,220 server 25560 26376 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:30:04,129 autoreload 25560 17156 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:30:08,142 autoreload 10924 23608 Watching for file changes with StatReloader
+INFO 2026-05-14 18:30:09,051 web3_connection 10924 23608 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:30:09,051 web3_connection 10924 23608 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:30:09,056 web3_connection 10924 23608 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:30:09,062 web3_connection 10924 23608 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:30:09,062 web3_connection 10924 23608 Web3 connection module loaded successfully
+INFO 2026-05-14 18:30:09,139 server 10924 29292 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:30:09,139 server 10924 29292 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:30:09,140 server 10924 29292 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:30:50,728 runserver 10924 29292 HTTP GET /api/blockchain/info/ 200 [0.04, 127.0.0.1:60892]
+INFO 2026-05-14 18:30:56,591 autoreload 272 4828 Watching for file changes with StatReloader
+INFO 2026-05-14 18:31:49,411 autoreload 12944 14656 Watching for file changes with StatReloader
+INFO 2026-05-14 18:31:50,303 web3_connection 12944 14656 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:31:50,303 web3_connection 12944 14656 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:31:50,329 web3_connection 12944 14656 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:31:50,336 web3_connection 12944 14656 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:31:50,336 web3_connection 12944 14656 Web3 connection module loaded successfully
+INFO 2026-05-14 18:31:50,396 runserver 10924 29292 HTTP GET /api/blockchain/info/ 200 [0.02, 127.0.0.1:51109]
+INFO 2026-05-14 18:31:50,426 server 12944 13400 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:31:50,426 server 12944 13400 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+CRITICAL 2026-05-14 18:31:50,427 server 12944 13400 Listen failure: Couldn't listen on 127.0.0.1:8000: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
+INFO 2026-05-14 18:32:00,746 runserver 10924 29292 HTTP GET /api/blockchain/info/ 200 [0.03, 127.0.0.1:52840]
+INFO 2026-05-14 18:32:02,847 runserver 10924 29292 HTTP GET /api/public/stats/ 200 [0.02, 127.0.0.1:54445]
+INFO 2026-05-14 18:32:03,198 runserver 10924 29292 HTTP GET /api/public/stats/ 200 [0.03, 127.0.0.1:55942]
+INFO 2026-05-14 18:32:04,586 runserver 10924 29292 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:61999]
+INFO 2026-05-14 18:32:04,767 runserver 10924 29292 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:56826]
+INFO 2026-05-14 18:32:04,951 runserver 10924 29292 HTTP GET /api/public/stats/ 200 [0.02, 127.0.0.1:56296]
+INFO 2026-05-14 18:32:04,969 runserver 10924 29292 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:56298]
+INFO 2026-05-14 18:32:05,837 runserver 10924 29292 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:60663]
+INFO 2026-05-14 18:32:05,850 runserver 10924 29292 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:60665]
+INFO 2026-05-14 18:32:05,914 runserver 10924 29292 HTTP GET /api/public/stats/ 200 [0.02, 127.0.0.1:60667]
+INFO 2026-05-14 18:32:06,319 runserver 10924 29292 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:55645]
+INFO 2026-05-14 18:32:06,334 runserver 10924 29292 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:55647]
+INFO 2026-05-14 18:32:06,556 runserver 10924 29292 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:64869]
+INFO 2026-05-14 18:32:06,572 runserver 10924 29292 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:56008]
+INFO 2026-05-14 18:32:19,321 runserver 10924 29292 HTTP POST /api/auth/login/ 200 [0.59, 127.0.0.1:63331]
+INFO 2026-05-14 18:32:19,439 runserver 10924 29292 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:62384]
+INFO 2026-05-14 18:32:19,463 runserver 10924 29292 HTTP GET /api/auth/user/ 200 [0.02, 127.0.0.1:62818]
+INFO 2026-05-14 18:32:19,741 runserver 10924 29292 HTTP GET /api/faculty/dashboard/ 200 [0.02, 127.0.0.1:51859]
+INFO 2026-05-14 18:32:19,766 runserver 10924 29292 HTTP GET /api/faculty/dashboard/ 200 [0.02, 127.0.0.1:57728]
+INFO 2026-05-14 18:32:23,713 runserver 10924 29292 HTTP POST /api/attendance/window/open/ 200 [0.04, 127.0.0.1:57732]
+ERROR 2026-05-14 18:32:39,716 log 10924 3732 Internal Server Error: /api/attendance/mark/multi/
+ERROR 2026-05-14 18:32:39,717 runserver 10924 29292 HTTP POST /api/attendance/mark/multi/ 500 [1.19, 127.0.0.1:57738]
+ERROR 2026-05-14 18:32:42,756 log 10924 3732 Internal Server Error: /api/attendance/mark/multi/
+ERROR 2026-05-14 18:32:42,756 runserver 10924 29292 HTTP POST /api/attendance/mark/multi/ 500 [0.28, 127.0.0.1:57740]
+INFO 2026-05-14 18:33:31,401 autoreload 10924 23608 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:33:31,956 autoreload 12944 14656 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\embedding_utils.py changed, reloading.
+INFO 2026-05-14 18:33:35,865 autoreload 26428 25100 Watching for file changes with StatReloader
+INFO 2026-05-14 18:33:36,290 autoreload 28704 4288 Watching for file changes with StatReloader
+INFO 2026-05-14 18:33:36,819 web3_connection 26428 25100 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:33:36,819 web3_connection 26428 25100 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:33:36,827 web3_connection 26428 25100 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:33:36,839 web3_connection 26428 25100 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:33:36,839 web3_connection 26428 25100 Web3 connection module loaded successfully
+INFO 2026-05-14 18:33:36,919 server 26428 10408 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:33:36,920 server 26428 10408 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:33:36,921 server 26428 10408 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:33:37,290 web3_connection 28704 4288 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:33:37,290 web3_connection 28704 4288 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:33:37,295 web3_connection 28704 4288 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:33:37,304 web3_connection 28704 4288 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:33:37,304 web3_connection 28704 4288 Web3 connection module loaded successfully
+INFO 2026-05-14 18:33:37,382 server 28704 26232 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:33:37,384 server 28704 26232 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+CRITICAL 2026-05-14 18:33:37,386 server 28704 26232 Listen failure: Couldn't listen on 127.0.0.1:8000: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
+INFO 2026-05-14 18:33:43,921 autoreload 26428 25100 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:33:44,291 autoreload 28704 4288 C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\attendance\recognizer.py changed, reloading.
+INFO 2026-05-14 18:33:48,354 autoreload 26080 14080 Watching for file changes with StatReloader
+INFO 2026-05-14 18:33:48,594 autoreload 9964 21392 Watching for file changes with StatReloader
+INFO 2026-05-14 18:33:49,390 web3_connection 26080 14080 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:33:49,390 web3_connection 26080 14080 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:33:49,407 web3_connection 26080 14080 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:33:49,413 web3_connection 26080 14080 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:33:49,413 web3_connection 26080 14080 Web3 connection module loaded successfully
+INFO 2026-05-14 18:33:49,504 server 26080 16912 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:33:49,504 server 26080 16912 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+INFO 2026-05-14 18:33:49,505 server 26080 16912 Listening on TCP address 127.0.0.1:8000
+INFO 2026-05-14 18:33:49,682 web3_connection 9964 21392 ABI loaded successfully from C:\Users\hp\OneDrive\Desktop\certificates\CV\Research papers\Smart_Attendance_System_With_Blockchain\Backend\blockchain\abi.json
+INFO 2026-05-14 18:33:49,683 web3_connection 9964 21392 Attempting to connect to Ganache at http://127.0.0.1:7545
+INFO 2026-05-14 18:33:49,702 web3_connection 9964 21392 Successfully connected to Ganache. Network ID: 5777
+INFO 2026-05-14 18:33:49,712 web3_connection 9964 21392 Contract initialized at 0xDa0c9a811f7851Deb38A66889D5510789DbBCd05
+INFO 2026-05-14 18:33:49,713 web3_connection 9964 21392 Web3 connection module loaded successfully
+INFO 2026-05-14 18:33:49,802 server 9964 1664 HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+INFO 2026-05-14 18:33:49,802 server 9964 1664 Configuring endpoint tcp:port=8000:interface=127.0.0.1
+CRITICAL 2026-05-14 18:33:49,803 server 9964 1664 Listen failure: Couldn't listen on 127.0.0.1:8000: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
+WARNING 2026-05-14 18:34:12,348 log 26080 29364 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:34:12,349 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 400 [0.98, 127.0.0.1:49198]
+WARNING 2026-05-14 18:34:18,111 log 26080 29364 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:34:18,112 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 400 [0.33, 127.0.0.1:65033]
+WARNING 2026-05-14 18:34:20,713 log 26080 29364 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:34:20,714 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 400 [0.28, 127.0.0.1:57854]
+WARNING 2026-05-14 18:34:47,112 log 26080 29364 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:34:47,113 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 400 [0.31, 127.0.0.1:53774]
+INFO 2026-05-14 18:34:58,941 runserver 26080 16912 HTTP POST /api/attendance/window/open/ 200 [0.02, 127.0.0.1:52634]
+INFO 2026-05-14 18:35:03,459 blockchain_operations 26080 26536 Storing attendance on blockchain for 12212345
+INFO 2026-05-14 18:35:03,487 blockchain_operations 26080 26536 Transaction sent: 0xb4eb454edab34af4e632ed26601bbce5aea735aeb025a1260c45a88a64d8b659
+INFO 2026-05-14 18:35:03,493 blockchain_operations 26080 26536 Attendance stored successfully. TxHash: 0xb4eb454edab34af4e632ed26601bbce5aea735aeb025a1260c45a88a64d8b659, Block: 43, Gas Used: 22872
+INFO 2026-05-14 18:35:03,508 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 200 [0.34, 127.0.0.1:59874]
+WARNING 2026-05-14 18:35:24,822 log 26080 29364 Bad Request: /api/attendance/mark/multi/
+WARNING 2026-05-14 18:35:24,823 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 400 [0.33, 127.0.0.1:49707]
+INFO 2026-05-14 18:35:30,512 blockchain_operations 26080 16220 Storing attendance on blockchain for 12212463
+INFO 2026-05-14 18:35:30,542 blockchain_operations 26080 16220 Transaction sent: 0x87383701a52a9b688ca893f753a9e3a709e970f3a51eaf5a76fb0255280725a7
+INFO 2026-05-14 18:35:30,546 blockchain_operations 26080 16220 Attendance stored successfully. TxHash: 0x87383701a52a9b688ca893f753a9e3a709e970f3a51eaf5a76fb0255280725a7, Block: 44, Gas Used: 22872
+INFO 2026-05-14 18:35:30,562 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 200 [0.35, 127.0.0.1:62359]
+INFO 2026-05-14 18:35:58,110 blockchain_operations 26080 22088 Storing attendance on blockchain for 12341234
+INFO 2026-05-14 18:35:58,145 blockchain_operations 26080 22088 Transaction sent: 0xaf416ffceefc71c0b0723821a4722e357cf073948a0d397f2a4a58f4b18ec926
+INFO 2026-05-14 18:35:58,151 blockchain_operations 26080 22088 Attendance stored successfully. TxHash: 0xaf416ffceefc71c0b0723821a4722e357cf073948a0d397f2a4a58f4b18ec926, Block: 45, Gas Used: 22872
+INFO 2026-05-14 18:35:58,169 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 200 [0.43, 127.0.0.1:58144]
+INFO 2026-05-14 18:36:07,178 blockchain_operations 26080 11744 Storing attendance on blockchain for 12212463
+INFO 2026-05-14 18:36:07,213 blockchain_operations 26080 11744 Transaction sent: 0x08237551c2d05053460001abc205ff100c0c75aeddc8bd788d16c7c46421ee2f
+INFO 2026-05-14 18:36:07,218 blockchain_operations 26080 11744 Attendance stored successfully. TxHash: 0x08237551c2d05053460001abc205ff100c0c75aeddc8bd788d16c7c46421ee2f, Block: 46, Gas Used: 22872
+INFO 2026-05-14 18:36:07,231 blockchain_operations 26080 11744 Storing attendance on blockchain for 12341234
+INFO 2026-05-14 18:36:07,264 blockchain_operations 26080 11744 Transaction sent: 0xca7ad3b09cc229d18b0e59caaf378275a1525ff72d11bc9c56d3da9b4e72ce51
+INFO 2026-05-14 18:36:07,268 blockchain_operations 26080 11744 Attendance stored successfully. TxHash: 0xca7ad3b09cc229d18b0e59caaf378275a1525ff72d11bc9c56d3da9b4e72ce51, Block: 47, Gas Used: 22872
+INFO 2026-05-14 18:36:07,284 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 200 [0.45, 127.0.0.1:57956]
+INFO 2026-05-14 18:36:30,199 blockchain_operations 26080 16032 Storing attendance on blockchain for 12212463
+INFO 2026-05-14 18:36:30,225 blockchain_operations 26080 16032 Transaction sent: 0xc8b865cc0b9e14ddcae7b2bdaed91b3fc351cc30b439d06a728a7c2567db9314
+INFO 2026-05-14 18:36:30,229 blockchain_operations 26080 16032 Attendance stored successfully. TxHash: 0xc8b865cc0b9e14ddcae7b2bdaed91b3fc351cc30b439d06a728a7c2567db9314, Block: 48, Gas Used: 22872
+INFO 2026-05-14 18:36:30,240 blockchain_operations 26080 16032 Storing attendance on blockchain for 12212345
+INFO 2026-05-14 18:36:30,266 blockchain_operations 26080 16032 Transaction sent: 0x1b38c35f855fd21ef6882c0b75f6b21add1ca3105c17c2ae06769b0fe4978666
+INFO 2026-05-14 18:36:30,270 blockchain_operations 26080 16032 Attendance stored successfully. TxHash: 0x1b38c35f855fd21ef6882c0b75f6b21add1ca3105c17c2ae06769b0fe4978666, Block: 49, Gas Used: 22872
+INFO 2026-05-14 18:36:30,283 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 200 [0.55, 127.0.0.1:61056]
+INFO 2026-05-14 18:36:40,607 blockchain_operations 26080 28332 Storing attendance on blockchain for 12212463
+INFO 2026-05-14 18:36:40,633 blockchain_operations 26080 28332 Transaction sent: 0xbf7e67ae0d4a9a06605b4ccff886686b363f786d566f35a74180ecdd839f4c2f
+INFO 2026-05-14 18:36:40,637 blockchain_operations 26080 28332 Attendance stored successfully. TxHash: 0xbf7e67ae0d4a9a06605b4ccff886686b363f786d566f35a74180ecdd839f4c2f, Block: 50, Gas Used: 22872
+INFO 2026-05-14 18:36:40,654 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 200 [0.51, 127.0.0.1:50875]
+INFO 2026-05-14 18:37:06,166 blockchain_operations 26080 25220 Storing attendance on blockchain for 12212463
+INFO 2026-05-14 18:37:06,196 blockchain_operations 26080 25220 Transaction sent: 0xb42d2124d1d48577d8ce2bbadbdd130d5f994ac043cfd996398283df7c9e7a00
+INFO 2026-05-14 18:37:06,200 blockchain_operations 26080 25220 Attendance stored successfully. TxHash: 0xb42d2124d1d48577d8ce2bbadbdd130d5f994ac043cfd996398283df7c9e7a00, Block: 51, Gas Used: 22872
+INFO 2026-05-14 18:37:06,213 blockchain_operations 26080 25220 Storing attendance on blockchain for 12341234
+INFO 2026-05-14 18:37:06,241 blockchain_operations 26080 25220 Transaction sent: 0x378bb550852c88525f90adcb42d36495377a279e6f041a480e7595a9bd256318
+INFO 2026-05-14 18:37:06,245 blockchain_operations 26080 25220 Attendance stored successfully. TxHash: 0x378bb550852c88525f90adcb42d36495377a279e6f041a480e7595a9bd256318, Block: 52, Gas Used: 22872
+INFO 2026-05-14 18:37:06,258 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 200 [0.58, 127.0.0.1:56647]
+INFO 2026-05-14 18:37:25,526 blockchain_operations 26080 6860 Storing attendance on blockchain for 12212463
+INFO 2026-05-14 18:37:25,553 blockchain_operations 26080 6860 Transaction sent: 0x8e2d0025d67384cc68df2583d2a1f789de8f03106847542d427e45f24351557b
+INFO 2026-05-14 18:37:25,557 blockchain_operations 26080 6860 Attendance stored successfully. TxHash: 0x8e2d0025d67384cc68df2583d2a1f789de8f03106847542d427e45f24351557b, Block: 53, Gas Used: 22872
+INFO 2026-05-14 18:37:25,569 blockchain_operations 26080 6860 Storing attendance on blockchain for 12212345
+INFO 2026-05-14 18:37:25,592 blockchain_operations 26080 6860 Transaction sent: 0xcb3b378a1643c697303d0a0e307f35a11176afc997380fb3d57334cd75d90974
+INFO 2026-05-14 18:37:25,596 blockchain_operations 26080 6860 Attendance stored successfully. TxHash: 0xcb3b378a1643c697303d0a0e307f35a11176afc997380fb3d57334cd75d90974, Block: 54, Gas Used: 22872
+INFO 2026-05-14 18:37:25,605 blockchain_operations 26080 6860 Storing attendance on blockchain for 12341234
+INFO 2026-05-14 18:37:25,631 blockchain_operations 26080 6860 Transaction sent: 0xdcc80d67658dcfc488d494a33de8bdbe7d8998752bee2d9fcc23be1bf64e01bf
+INFO 2026-05-14 18:37:25,634 blockchain_operations 26080 6860 Attendance stored successfully. TxHash: 0xdcc80d67658dcfc488d494a33de8bdbe7d8998752bee2d9fcc23be1bf64e01bf, Block: 55, Gas Used: 22872
+INFO 2026-05-14 18:37:25,647 runserver 26080 16912 HTTP POST /api/attendance/mark/multi/ 200 [0.51, 127.0.0.1:65255]
+INFO 2026-05-14 18:38:30,493 runserver 26080 16912 HTTP POST /api/auth/logout/ 200 [0.03, 127.0.0.1:54869]
+INFO 2026-05-14 18:38:30,836 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:53161]
+INFO 2026-05-14 18:38:30,847 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:57081]
+INFO 2026-05-14 18:38:39,524 runserver 26080 16912 HTTP POST /api/auth/login/ 200 [0.66, 127.0.0.1:60971]
+INFO 2026-05-14 18:38:39,645 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:61369]
+INFO 2026-05-14 18:38:39,659 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:61371]
+INFO 2026-05-14 18:38:43,154 runserver 26080 16912 HTTP GET /api/attendance/?search= 200 [0.09, 127.0.0.1:53821]
+INFO 2026-05-14 18:38:43,228 runserver 26080 16912 HTTP GET /api/attendance/?search= 200 [0.06, 127.0.0.1:53823]
+INFO 2026-05-14 18:38:57,199 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:58540]
+INFO 2026-05-14 18:38:57,215 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:49966]
+INFO 2026-05-14 18:39:02,107 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:65229]
+INFO 2026-05-14 18:39:02,125 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:65231]
+INFO 2026-05-14 18:39:03,697 runserver 26080 16912 HTTP POST /api/auth/logout/ 200 [0.03, 127.0.0.1:49868]
+INFO 2026-05-14 18:39:03,802 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:54333]
+INFO 2026-05-14 18:39:03,813 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:54335]
+INFO 2026-05-14 18:39:08,487 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:59761]
+INFO 2026-05-14 18:39:08,499 runserver 26080 16912 HTTP GET /api/auth/user/ 200 [0.01, 127.0.0.1:59763]
+INFO 2026-05-14 18:39:08,575 runserver 26080 16912 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:59765]
+INFO 2026-05-14 18:39:08,590 runserver 26080 16912 HTTP GET /api/public/stats/ 200 [0.01, 127.0.0.1:59767]
+INFO 2026-05-14 18:39:10,605 runserver 26080 16912 HTTP GET /api/blockchain/info/ 200 [0.05, 127.0.0.1:55225]
+INFO 2026-05-14 18:39:10,856 runserver 26080 16912 HTTP GET /api/blockchain/info/ 200 [0.06, 127.0.0.1:61528]
+INFO 2026-05-14 18:39:25,586 runserver 26080 16912 HTTP GET /api/blockchain/info/ 200 [0.03, 127.0.0.1:51344]
+INFO 2026-05-14 18:39:40,922 runserver 26080 16912 HTTP GET /api/blockchain/info/ 200 [0.06, 127.0.0.1:61969]
+INFO 2026-05-14 18:39:42,692 runserver 26080 16912 HTTP GET /api/public/stats/ 200 [0.02, 127.0.0.1:57368]
+INFO 2026-05-14 18:39:43,050 runserver 26080 16912 HTTP GET /api/public/stats/ 200 [0.04, 127.0.0.1:50993]
